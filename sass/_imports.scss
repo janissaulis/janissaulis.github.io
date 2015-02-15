@@ -1,0 +1,109 @@
+@import "compass/css3";
+@import "compass/utilities";
+
+
+$color_blue: #2A67B2;
+$color_blue_dark: #1c4578;
+$color_blue_darker: #16355d;
+$color_blue_light: #aad4ef;
+$color_light: #f7f7f7;
+$color_medium_light: #c6c6c6;
+
+
+
+
+
+
+
+//SPRITES
+@import "../img/icons/*.png";
+@include all-icons-sprites;
+
+.social_nav a{
+  display: block;
+  width: 64px;
+  height: 64px;
+  @include hide-text;
+  transition: .35s;
+}
+
+
+//---------------------------------------------------------------------------------------------------
+
+* {
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  list-style: none;
+  color: white;
+  text-decoration: none !important;
+}
+
+body {
+  background: $color_light;
+}
+
+img {
+  max-height: 100%;
+  max-width: 100%;
+}
+
+h1 {
+  color: $color_light;
+  width: 100%;
+  text-align: center;
+  margin-top: 0;
+  margin-bottom: 50px;
+  font-weight: normal;
+}
+
+h1.dark_h {
+  color: $color_blue;
+}
+
+.wrapper {
+  width: 70%;
+  height: 100%;
+}
+
+.padding {
+  padding: 100px 0;
+}
+
+.flex {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.horizontal_center {
+  justify-content: center;
+}
+
+.vertical_center {
+  align-self: center;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*======================================================================*/
+//MAP
+
+#google_map {
+  width: 100%;
+  height: 600px;
+  margin: 0;
+}

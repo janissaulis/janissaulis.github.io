@@ -1,0 +1,413 @@
+@import "imports";
+
+
+
+//------------------------------------------------------------
+//HEADER
+
+
+.navbar {
+  background: $color_blue;
+  border: none;
+  border-radius: 0;
+  margin-bottom: 0;
+  position: fixed;
+  z-index: 10;
+  width: 100%;
+
+  .container-fluid {
+    padding: 0;
+  }
+
+  .navbar-toggle {
+    background: none;
+    border: none;
+    padding: 33px;
+    border-radius: 0;
+    margin: 0;
+    transition: .35s;
+
+
+    &:hover, &:focus {
+      background: $color_light;
+    }
+    &:hover>span.icon-bar, &:focus>span.icon-bar {
+      background: $color_blue;
+    }
+
+    span.icon-bar {
+      background: $color_light;
+      width: 30px;
+      transition: .35s;
+    }
+
+   li {
+      width: 100%;
+    }
+  }
+
+  .navbar-nav>li {
+
+    &>a {
+      padding: 30px;
+      color: $color_light;
+      font-size: 16px;
+      transition: .35s;
+
+      &:hover {
+        background: $color_light;
+        color: $color_blue;
+      }
+    }
+  }
+
+  .navbar-right {
+    margin-right: 100px;
+  }
+
+
+  &>.container-fluid {
+
+    div.navbar-brand {
+      height: 60px;
+      width: auto;
+      padding: 0;
+      margin-left: 100px;
+      margin-top: 10px;
+    }
+  }
+}
+
+
+@media screen and (max-width: 1281px){
+  .navbar {
+
+    .navbar-toggle {
+      background: none;
+      border: none;
+      padding: 33px;
+      border-radius: 0;
+      margin: 0;
+      transition: .35s;
+
+
+      &:hover, &:focus {
+        background: $color_light;
+      }
+      &:hover>span.icon-bar, &:focus>span.icon-bar {
+        background: $color_blue;
+      }
+
+      span.icon-bar {
+        background: $color_light;
+        width: 30px;
+        transition: .35s;
+      }
+
+      li {
+        width: 100%;
+      }
+    }
+
+    .navbar-nav {
+      margin: 0;
+    }
+
+    .navbar-right {
+      margin-right: 0;
+    }
+
+
+    &>.container-fluid {
+
+      div.navbar-brand {
+        height: 50px;
+        width: auto;
+        padding: 0;
+        margin: 15px 0 0 25px;
+      }
+    }
+  }
+}
+
+/*======================================================================*/
+//FIRST FOLD
+
+section.first_fold {
+  width: 100%;
+  height: auto;
+  min-height: 960px;
+  line-height: 0;
+  position: relative;
+  background: url("../img/shop-sample-bg.jpg");
+  background-size: cover;
+
+  div.vid_overlay {
+    width: 100%;
+    height: 100%;
+    background: rgba($color_blue, .65);
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 5;
+    text-align: center;
+
+    div {
+      width: 600px;
+      height: auto;
+      padding: 30px 0;
+    }
+
+    h2 {
+      width: 100%;
+      margin: 0;
+      color: $color_blue_light;
+    }
+
+    h1 {
+      font-size: 50px;
+      width: 100%;
+      margin: 20px 0;
+      color: $color_light;
+    }
+
+    a {
+      margin: auto;
+    }
+  }
+
+
+  video {
+    width: 100%;
+  }
+}
+
+
+@media screen and (max-width: 1281px){
+  section.first_fold {
+    min-height: 100vh;
+
+
+    video {
+      display: none;
+    }
+  }
+}
+
+@media screen and (max-width: 500px){
+  section.first_fold {
+
+    div.vid_overlay {
+
+      h2 {
+        width: 100%;
+        margin: 0;
+        font-size: 20px;
+      }
+
+      h1 {
+        font-size: 40px;
+        width: 100%;
+        margin: 20px 0;
+      }
+    }
+  }
+}
+
+
+
+/*======================================================================*/
+//APRIIKOJUMS
+
+section.aprikojums {
+  width: 100%;
+  height: 600px;
+
+  div {
+    //background: lightsalmon;
+  }
+}
+
+
+
+/*======================================================================*/
+//PAR MUMS
+
+section.par_mums {
+  width: 100%;
+  height: 600px;
+  background: $color_blue;
+
+  div {
+    //background: lightblue;
+  }
+}
+
+
+
+/*======================================================================*/
+//PARTNERS
+
+section.partners {
+  width: 100%;
+  height: auto;
+
+  a {
+    margin: 30px;
+  }
+
+  img {
+    max-width: 200px;
+    max-height: 140px;
+    //background: green;
+    opacity: .25;
+    filter: grayscale(100%);
+    -webkit-filter: grayscale(100%);
+    transition: .35s;
+
+    &:hover {
+      filter: grayscale(0);
+      -webkit-filter: grayscale(0);
+      opacity: .75;
+    }
+  }
+}
+
+
+@media screen and (max-width: 1100px){
+  section.partners {
+
+    img {
+      max-width: 140px;
+      max-height: 100px;
+    }
+  }
+}
+
+@media screen and (max-width: 700px){
+  section.partners {
+
+    img {
+      max-width: 80px;
+      max-height: 80px;
+    }
+  }
+}
+
+
+/*======================================================================*/
+//FOOTER
+
+footer {
+  height: 300px;
+  background: $color_blue_dark;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+
+  .social_nav {
+    width: 100%;
+    //background: red;
+    justify-content: flex-end;
+  }
+
+  .rekviziti {
+    width: 50%;
+    height: 240px;
+    justify-content: flex-end;
+    //background: green;
+
+    h4 {
+      width: 100%;
+      font-size: 16px;
+      color: $color_light;
+    }
+  }
+
+  .social_media {
+    width: 50%;
+    height: 100%;
+
+    ul {
+      padding: 0;
+
+      li {
+        margin: 10px;
+      }
+    }
+  }
+
+  .copyrights {
+    width: 100%;
+    align-self: flex-end;
+    padding: 5px 0;
+    background: $color_blue_darker;
+    border-top: 1px solid $color_blue;
+
+    a, p, {
+      margin: 10px;
+      color: $color_blue;
+      font-size: 14px;
+    }
+
+    a {
+      transition: .35s;
+
+      &:hover {
+        color: $color_light;
+      }
+    }
+
+    li {
+      margin: 25px 0 0;
+    }
+
+    ul {
+      padding: 0;
+      margin: 0;
+    }
+  }
+}
+
+
+@media screen and (max-width: 800px){
+  footer {
+    height: 420px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+
+    .social_nav {
+      width: auto;
+      //background: red;
+      justify-content: center;
+    }
+
+    .rekviziti {
+      width: 100%;
+      height: 240px;
+      justify-content: flex-end;
+      //background: green;
+      order: 2;
+
+      h4 {
+        width: 100%;
+        font-size: 14px;
+        color: $color_light;
+      }
+    }
+
+    .social_media {
+      width: 100%;
+      height: auto;
+      margin-top: 30px;
+      order: 1;
+    }
+
+    .copyrights {
+      height: 90px;
+    }
+  }
+}
