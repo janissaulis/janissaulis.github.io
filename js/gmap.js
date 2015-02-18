@@ -1,17 +1,19 @@
-var SaulisHatta = new google.maps.LatLng(56.909420, 24.094588);
-var Ziepniekkalns = new google.maps.LatLng(56.909420, 24.094588);
+var Pointer = new google.maps.LatLng(56.909420, 24.094588);
+var Location = new google.maps.LatLng(56.909420, 24.094588);
 var marker;
 var map;
 
 function initialize() {
     var mapOptions = {
         zoom: 15,
-        center: SaulisHatta,
-        navigationControl: false,
+        center: Pointer,
+        navigationControl: true,
         mapTypeControl: false,
         scaleControl: false,
         scrollwheel: false,
-        disableDefaultUI: true
+        draggable: false,
+        panControl: true
+
     };
 
     map = new google.maps.Map(document.getElementById('google_map'),
@@ -19,9 +21,9 @@ function initialize() {
 
     marker = new google.maps.Marker({
         map:map,
-        draggable:true,
+        draggable:false,
         animation: google.maps.Animation.DROP,
-        position: Ziepniekkalns
+        position: Location
     });
     google.maps.event.addListener(marker, 'click', toggleBounce);
 }

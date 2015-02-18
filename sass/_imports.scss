@@ -1,6 +1,8 @@
 @import "compass/css3";
 @import "compass/utilities";
 
+@import "flexbox";
+
 
 $color_blue: #2A67B2;
 $color_blue_dark: #1c4578;
@@ -42,10 +44,6 @@ body {
   background: $color_light;
 }
 
-img {
-  max-height: 100%;
-  max-width: 100%;
-}
 
 h1 {
   color: $color_light;
@@ -70,16 +68,16 @@ h1.dark_h {
 }
 
 .flex {
-  display: flex;
-  flex-wrap: wrap;
+  @extend %flexbox;
+  @include flex-wrap(wrap);
 }
 
 .horizontal_center {
-  justify-content: center;
+  @include justify-content(center);
 }
 
 .vertical_center {
-  align-self: center;
+  @include align-self(center);
 }
 
 
@@ -95,7 +93,13 @@ h1.dark_h {
 
 
 
+//GLOBAS MEDIA
 
+@media screen and (max-width: 1281px){
+  .width_1280 {
+    width: 90%;
+  }
+}
 
 
 
