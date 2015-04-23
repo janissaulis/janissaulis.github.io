@@ -1,8 +1,6 @@
 @import "compass/css3";
 @import "compass/utilities";
 
-@import "flexbox";
-
 
 $color_blue: #2A67B2;
 $color_blue_dark: #1c4578;
@@ -10,24 +8,6 @@ $color_blue_darker: #16355d;
 $color_blue_light: #aad4ef;
 $color_light: #f7f7f7;
 $color_medium_light: #c6c6c6;
-
-
-
-
-
-
-
-//SPRITES
-@import "../img/icons/*.png";
-@include all-icons-sprites;
-
-.social_nav a{
-  display: block;
-  width: 64px;
-  height: 64px;
-  @include hide-text;
-  transition: .35s;
-}
 
 
 //---------------------------------------------------------------------------------------------------
@@ -40,74 +20,23 @@ $color_medium_light: #c6c6c6;
   text-decoration: none !important;
 }
 
-body {
-  background: $color_light;
+.left,
+.right {
+  height: 100vh;
+  width: 50%;
+  float: left;
+  transition: .6s;
 }
 
-
-h1 {
-  color: $color_light;
-  width: 100%;
-  text-align: center;
-  margin-top: 0;
-  margin-bottom: 50px;
-  font-weight: normal;
+button {
+  background: none;
+  border: none;
 }
 
-h1.dark_h {
-  color: $color_blue;
+p {
+  text-align: justify;
 }
 
-.wrapper {
-  width: 70%;
-  height: 100%;
-}
-
-.padding {
-  padding: 100px 0;
-}
-
-.flex {
-  @extend %flexbox;
-  @include flex-wrap(wrap);
-}
-
-.horizontal_center {
-  @include justify-content(center);
-}
-
-.vertical_center {
-  @include align-self(center);
-}
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-//GLOBAS MEDIA
-
-@media screen and (max-width: 1281px){
-  .width_1280 {
-    width: 90%;
-  }
-}
-
-
-
-/*======================================================================*/
-//MAP
-
-#google_map {
-  width: 100%;
-  height: 600px;
-  margin: 0;
+.section {
+  height: 100vh;
 }

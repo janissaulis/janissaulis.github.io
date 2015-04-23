@@ -1,57 +1,4 @@
-/* line 70, ../sass/_flexbox.scss */
-.flex {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-}
-
-/* line 88, ../img/icons/*.png */
-.icons-sprite, .icons-fb, .icons-in, .icons-tw {
-  background-image: url('../img/../img/icons-sffe8325a7c.png');
-  background-repeat: no-repeat;
-}
-
-/* line 84, C:/Ruby21-x64/lib/ruby/gems/2.1.0/gems/compass-core-1.0.1/stylesheets/compass/utilities/sprites/_base.scss */
-.icons-fb {
-  background-position: 0 -64px;
-}
-/* line 59, C:/Ruby21-x64/lib/ruby/gems/2.1.0/gems/compass-core-1.0.1/stylesheets/compass/utilities/sprites/_base.scss */
-.icons-fb:hover, .icons-fb.fb-hover {
-  background-position: 0 0;
-}
-
-/* line 84, C:/Ruby21-x64/lib/ruby/gems/2.1.0/gems/compass-core-1.0.1/stylesheets/compass/utilities/sprites/_base.scss */
-.icons-in {
-  background-position: 0 -192px;
-}
-/* line 59, C:/Ruby21-x64/lib/ruby/gems/2.1.0/gems/compass-core-1.0.1/stylesheets/compass/utilities/sprites/_base.scss */
-.icons-in:hover, .icons-in.in-hover {
-  background-position: 0 -128px;
-}
-
-/* line 84, C:/Ruby21-x64/lib/ruby/gems/2.1.0/gems/compass-core-1.0.1/stylesheets/compass/utilities/sprites/_base.scss */
-.icons-tw {
-  background-position: 0 -320px;
-}
-/* line 59, C:/Ruby21-x64/lib/ruby/gems/2.1.0/gems/compass-core-1.0.1/stylesheets/compass/utilities/sprites/_base.scss */
-.icons-tw:hover, .icons-tw.tw-hover {
-  background-position: 0 -256px;
-}
-
-/* line 24, ../sass/_imports.scss */
-.social_nav a {
-  display: block;
-  width: 64px;
-  height: 64px;
-  text-indent: -119988px;
-  overflow: hidden;
-  text-align: left;
-  text-transform: capitalize;
-  transition: .35s;
-}
-
-/* line 35, ../sass/_imports.scss */
+/* line 15, ../sass/_imports.scss */
 * {
   -moz-box-sizing: border-box;
   box-sizing: border-box;
@@ -60,434 +7,209 @@
   text-decoration: none !important;
 }
 
-/* line 43, ../sass/_imports.scss */
-body {
-  background: #f7f7f7;
+/* line 23, ../sass/_imports.scss */
+.left,
+.right {
+  height: 100vh;
+  width: 50%;
+  float: left;
+  transition: .6s;
 }
 
-/* line 48, ../sass/_imports.scss */
-h1 {
-  color: #f7f7f7;
-  width: 100%;
-  text-align: center;
-  margin-top: 0;
-  margin-bottom: 50px;
-  font-weight: normal;
-}
-
-/* line 57, ../sass/_imports.scss */
-h1.dark_h {
-  color: #2A67B2;
-}
-
-/* line 61, ../sass/_imports.scss */
-.wrapper {
-  width: 70%;
-  height: 100%;
-}
-
-/* line 66, ../sass/_imports.scss */
-.padding {
-  padding: 100px 0;
-}
-
-/* line 70, ../sass/_imports.scss */
-.flex {
-  -webkit-flex-wrap: wrap;
-  -moz-flex-wrap: wrap;
-  -ms-flex-wrap: wrap;
-  flex-wrap: wrap;
-}
-
-/* line 75, ../sass/_imports.scss */
-.horizontal_center {
-  -webkit-box-pack: center;
-  -ms-flex-pack: center;
-  -webkit-justify-content: center;
-  -moz-justify-content: center;
-  justify-content: center;
-}
-
-/* line 79, ../sass/_imports.scss */
-.vertical_center {
-  -webkit-align-self: center;
-  -moz-align-self: center;
-  -ms-flex-item-align: center;
-  align-self: center;
-}
-
-@media screen and (max-width: 1281px) {
-  /* line 99, ../sass/_imports.scss */
-  .width_1280 {
-    width: 90%;
-  }
-}
-/*======================================================================*/
-/* line 109, ../sass/_imports.scss */
-#google_map {
-  width: 100%;
-  height: 600px;
-  margin: 0;
-}
-
-/* line 9, ../sass/global.scss */
-.navbar {
-  background: #2A67B2;
-  border: none;
-  border-radius: 0;
-  margin-bottom: 0;
-  position: fixed;
-  z-index: 10;
-  width: 100%;
-}
-/* line 18, ../sass/global.scss */
-.navbar .container-fluid {
-  padding: 0;
-}
-/* line 22, ../sass/global.scss */
-.navbar .navbar-toggle {
+/* line 31, ../sass/_imports.scss */
+button {
   background: none;
   border: none;
-  padding: 33px;
-  border-radius: 0;
-  margin: 0;
-  transition: .35s;
-}
-/* line 31, ../sass/global.scss */
-.navbar .navbar-toggle:hover, .navbar .navbar-toggle:focus {
-  background: #f7f7f7;
-}
-/* line 34, ../sass/global.scss */
-.navbar .navbar-toggle:hover > span.icon-bar, .navbar .navbar-toggle:focus > span.icon-bar {
-  background: #2A67B2;
-}
-/* line 38, ../sass/global.scss */
-.navbar .navbar-toggle span.icon-bar {
-  background: #f7f7f7;
-  width: 30px;
-  transition: .35s;
-}
-/* line 44, ../sass/global.scss */
-.navbar .navbar-toggle li {
-  width: 100%;
-}
-/* line 51, ../sass/global.scss */
-.navbar .navbar-nav > li > a {
-  padding: 30px;
-  color: #f7f7f7;
-  font-size: 16px;
-  transition: .35s;
-}
-/* line 57, ../sass/global.scss */
-.navbar .navbar-nav > li > a:hover {
-  background: #f7f7f7;
-  color: #2A67B2;
-}
-/* line 64, ../sass/global.scss */
-.navbar .navbar-right {
-  margin-right: 100px;
-}
-/* line 71, ../sass/global.scss */
-.navbar > .container-fluid div.navbar-brand {
-  height: 60px;
-  width: auto;
-  padding: 0;
-  margin-left: 100px;
-  margin-top: 10px;
-}
-/* line 78, ../sass/global.scss */
-.navbar > .container-fluid div.navbar-brand img {
-  max-height: 100%;
-  max-width: 100%;
 }
 
-@media screen and (max-width: 1281px) {
-  /* line 90, ../sass/global.scss */
-  .navbar .navbar-toggle {
-    background: none;
-    border: none;
-    padding: 33px;
-    border-radius: 0;
-    margin: 0;
-    transition: .35s;
-  }
-  /* line 99, ../sass/global.scss */
-  .navbar .navbar-toggle:hover, .navbar .navbar-toggle:focus {
-    background: #f7f7f7;
-  }
-  /* line 102, ../sass/global.scss */
-  .navbar .navbar-toggle:hover > span.icon-bar, .navbar .navbar-toggle:focus > span.icon-bar {
-    background: #2A67B2;
-  }
-  /* line 106, ../sass/global.scss */
-  .navbar .navbar-toggle span.icon-bar {
-    background: #f7f7f7;
-    width: 30px;
-    transition: .35s;
-  }
-  /* line 112, ../sass/global.scss */
-  .navbar .navbar-toggle li {
-    width: 100%;
-  }
-  /* line 117, ../sass/global.scss */
-  .navbar .navbar-nav {
-    margin: 0;
-  }
-  /* line 121, ../sass/global.scss */
-  .navbar .navbar-right {
-    margin-right: 0;
-  }
-  /* line 128, ../sass/global.scss */
-  .navbar > .container-fluid div.navbar-brand {
-    height: 50px;
-    width: auto;
-    padding: 0;
-    margin: 15px 0 0 25px;
-  }
+/* line 36, ../sass/_imports.scss */
+p {
+  text-align: justify;
 }
-/*======================================================================*/
-/* line 141, ../sass/global.scss */
-section.first_fold {
-  line-height: 0;
-  position: relative;
-  background: url("../img/shop-sample-bg.jpg");
-  background-size: cover;
+
+/* line 40, ../sass/_imports.scss */
+.section {
+  height: 100vh;
 }
-/* line 147, ../sass/global.scss */
-section.first_fold div.vid_overlay {
+
+/* line 8, ../sass/global.scss */
+button.hamburger {
+  position: fixed;
+  z-index: 100;
+  top: 15px;
+  right: 20px;
+  width: 40px;
+  height: 40px;
+}
+/* line 16, ../sass/global.scss */
+button.hamburger:hover > span {
+  background: #aad4ef;
+}
+/* line 20, ../sass/global.scss */
+button.hamburger span {
   width: 100%;
-  height: 100%;
-  background: rgba(42, 103, 178, 0.65);
-  position: absolute;
+  height: 4px;
+  background: #1c4578;
+  display: block;
+  margin: 5px 0;
+  transition: .4s;
+}
+
+/* line 30, ../sass/global.scss */
+ul.menu {
+  position: fixed;
   top: 0;
-  left: 0;
-  z-index: 5;
+  right: 0;
+  z-index: 1000;
+  background: rgba(28, 69, 120, 0.9);
+  width: 400px;
+  height: 100%;
+  padding: 50px 0 0;
+  display: none;
+}
+/* line 41, ../sass/global.scss */
+ul.menu button {
+  padding: 0;
+  margin: 0;
+  font-size: 3em;
+  color: #aad4ef;
+  width: 100%;
+}
+/* line 49, ../sass/global.scss */
+ul.menu button:hover {
+  color: #f7f7f7;
+  background: #16355d;
+}
+/* line 55, ../sass/global.scss */
+ul.menu li {
+  margin: 0;
   text-align: center;
 }
-/* line 157, ../sass/global.scss */
-section.first_fold div.vid_overlay div {
-  width: 600px;
-  height: auto;
-  padding: 30px 0;
-}
-/* line 163, ../sass/global.scss */
-section.first_fold div.vid_overlay h2 {
-  width: 100%;
-  margin: 0;
+/* line 60, ../sass/global.scss */
+ul.menu a {
   color: #aad4ef;
-}
-/* line 169, ../sass/global.scss */
-section.first_fold div.vid_overlay h1 {
-  font-size: 50px;
+  font-size: 1.25em;
+  transition: .4s;
+  display: block;
   width: 100%;
-  margin: 20px 0;
+  height: 60px;
+  padding: 15px 0 0;
+}
+/* line 69, ../sass/global.scss */
+ul.menu a:hover {
   color: #f7f7f7;
-}
-/* line 176, ../sass/global.scss */
-section.first_fold div.vid_overlay a {
-  margin: auto;
-}
-/* line 182, ../sass/global.scss */
-section.first_fold video {
-  width: 100%;
-  height: auto;
-}
-
-@media screen and (max-width: 1281px) {
-  /* line 190, ../sass/global.scss */
-  section.first_fold {
-    min-height: 100vh;
-  }
-  /* line 194, ../sass/global.scss */
-  section.first_fold video {
-    display: none;
-  }
-}
-@media screen and (max-width: 500px) {
-  /* line 205, ../sass/global.scss */
-  section.first_fold div.vid_overlay h2 {
-    width: 100%;
-    margin: 0;
-    font-size: 20px;
-  }
-  /* line 211, ../sass/global.scss */
-  section.first_fold div.vid_overlay h1 {
-    font-size: 40px;
-    width: 100%;
-    margin: 20px 0;
-  }
-}
-/*======================================================================*/
-/* line 225, ../sass/global.scss */
-section.aprikojums {
-  width: 100%;
-  height: 600px;
-}
-
-/*======================================================================*/
-/* line 239, ../sass/global.scss */
-section.par_mums {
-  width: 100%;
-  height: 600px;
-  background: #2A67B2;
-}
-
-/*======================================================================*/
-/* line 254, ../sass/global.scss */
-section.partners {
-  width: 100%;
-  height: auto;
-}
-/* line 258, ../sass/global.scss */
-section.partners a {
-  margin: 30px;
-}
-/* line 262, ../sass/global.scss */
-section.partners img {
-  max-width: 200px;
-  max-height: 140px;
-  opacity: .25;
-  filter: grayscale(100%);
-  -webkit-filter: grayscale(100%);
-  transition: .35s;
-}
-/* line 271, ../sass/global.scss */
-section.partners img:hover {
-  filter: grayscale(0);
-  -webkit-filter: grayscale(0);
-  opacity: .75;
-}
-
-@media screen and (max-width: 1100px) {
-  /* line 283, ../sass/global.scss */
-  section.partners img {
-    max-width: 140px;
-    max-height: 100px;
-  }
-}
-@media screen and (max-width: 700px) {
-  /* line 293, ../sass/global.scss */
-  section.partners img {
-    max-width: 80px;
-    max-height: 80px;
-  }
-}
-/*======================================================================*/
-/* line 304, ../sass/global.scss */
-footer {
-  height: 300px;
-  background: #1c4578;
-  width: 100%;
-}
-/* line 309, ../sass/global.scss */
-footer .social_nav {
-  width: 100%;
-  -webkit-box-pack: end;
-  -ms-flex-pack: end;
-  -webkit-justify-content: flex-end;
-  -moz-justify-content: flex-end;
-  justify-content: flex-end;
-}
-/* line 314, ../sass/global.scss */
-footer .rekviziti {
-  width: 50%;
-  height: 240px;
-  -webkit-box-pack: end;
-  -ms-flex-pack: end;
-  -webkit-justify-content: flex-end;
-  -moz-justify-content: flex-end;
-  justify-content: flex-end;
-}
-/* line 320, ../sass/global.scss */
-footer .rekviziti h4 {
-  width: 100%;
-  font-size: 16px;
-  color: #f7f7f7;
-}
-/* line 327, ../sass/global.scss */
-footer .social_media {
-  width: 50%;
-  height: 100%;
-}
-/* line 331, ../sass/global.scss */
-footer .social_media ul {
-  padding: 0;
-}
-/* line 334, ../sass/global.scss */
-footer .social_media ul li {
-  margin: 10px;
-}
-/* line 340, ../sass/global.scss */
-footer .copyrights {
-  width: 100%;
-  -webkit-align-self: flex-end;
-  -moz-align-self: flex-end;
-  -ms-flex-item-align: end;
-  align-self: flex-end;
-  padding: 5px 0;
   background: #16355d;
-  border-top: 1px solid #2A67B2;
-}
-/* line 347, ../sass/global.scss */
-footer .copyrights a, footer .copyrights p {
-  margin: 10px;
-  color: #2A67B2;
-  font-size: 14px;
-}
-/* line 353, ../sass/global.scss */
-footer .copyrights a {
-  transition: .35s;
-}
-/* line 356, ../sass/global.scss */
-footer .copyrights a:hover {
-  color: #f7f7f7;
-}
-/* line 361, ../sass/global.scss */
-footer .copyrights li {
-  margin: 25px 0 0;
-}
-/* line 365, ../sass/global.scss */
-footer .copyrights ul {
-  padding: 0;
-  margin: 0;
 }
 
-@media screen and (max-width: 800px) {
-  /* line 374, ../sass/global.scss */
-  footer {
-    height: 420px;
+/* line 76, ../sass/global.scss */
+.logo {
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  width: 160px;
+  height: auto;
+  z-index: 10;
+}
+/* line 84, ../sass/global.scss */
+.logo img {
+  max-width: 100%;
+  max-height: 100%;
+}
+
+/* line 95, ../sass/global.scss */
+.intro .left {
+  background: lightskyblue;
+  overflow: hidden;
+  position: relative;
+  /*.overlay {
+    position: absolute;
     width: 100%;
-  }
-  /* line 378, ../sass/global.scss */
-  footer .social_nav {
-    width: auto;
-    -webkit-box-pack: center;
-    -ms-flex-pack: center;
-    -webkit-justify-content: center;
-    -moz-justify-content: center;
-    justify-content: center;
-  }
-  /* line 384, ../sass/global.scss */
-  footer .rekviziti {
-    width: 100%;
-    height: 240px;
-    order: 2;
-  }
-  /* line 390, ../sass/global.scss */
-  footer .rekviziti h4 {
-    width: 100%;
-    font-size: 14px;
-    color: #f7f7f7;
-  }
-  /* line 397, ../sass/global.scss */
-  footer .social_media {
-    width: 100%;
-    height: auto;
-    margin-top: 30px;
-    order: 1;
-  }
-  /* line 404, ../sass/global.scss */
-  footer .copyrights {
-    height: 90px;
-  }
+    height: 100%;
+    background: rgba(white, .25);
+  }*/
+}
+/* line 107, ../sass/global.scss */
+.intro .left video {
+  min-width: 100%;
+  min-height: 100%;
+  width: auto;
+  height: auto;
+}
+/* line 115, ../sass/global.scss */
+.intro .right {
+  background: url("../img/sample_group_png.png");
+  background-size: cover;
+  text-align: center;
+  padding: 50px 50px 0;
+}
+/* line 121, ../sass/global.scss */
+.intro .right p {
+  margin-top: 50px;
+}
+/* line 125, ../sass/global.scss */
+.intro .right .intro_img {
+  margin: 80px auto 0;
+  width: 50%;
+  transition: .6s;
+}
+/* line 130, ../sass/global.scss */
+.intro .right .intro_img:hover {
+  width: 60%;
+}
+/* line 134, ../sass/global.scss */
+.intro .right .intro_img img {
+  max-width: 100%;
+  max-height: 100%;
+  border-radius: 100%;
+  border: 3px solid #f7f7f7;
+  transition: .4s linear;
+}
+
+/* line 149, ../sass/global.scss */
+.svarigi {
+  padding: 0 30%;
+  background: url("../img/shingle-roof.png") no-repeat;
+  background-size: cover;
+}
+/* line 154, ../sass/global.scss */
+.svarigi .fade_in {
+  opacity: 1;
+  transform: translateX(0px);
+}
+/* line 159, ../sass/global.scss */
+.svarigi p {
+  text-align: justify;
+  color: #2A67B2;
+  font-size: 1.25em;
+  margin-bottom: 30px;
+  opacity: 0;
+  transition: .4s;
+  transform: translateX(-50px);
+}
+/* line 168, ../sass/global.scss */
+.svarigi p::before {
+  content: "";
+  display: inline-block;
+  width: 20px;
+  height: 20px;
+  border: 3px solid #2A67B2;
+  margin-right: 10px;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+  border-bottom-left-radius: 10px;
+}
+/* line 181, ../sass/global.scss */
+.svarigi h1 {
+  color: #1c4578;
+  text-align: center;
+  margin-bottom: 100px;
+}
+
+/* line 194, ../sass/global.scss */
+.pakalpojumi .test {
+  width: 20%;
+  height: 100%;
+  float: left;
+  position: relative;
+  transition: .6s;
 }

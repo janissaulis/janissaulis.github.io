@@ -5,112 +5,146 @@
     <meta name="viewport" content="width=device-width" />
     <link href="stylesheets/normalize.css" rel="stylesheet">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fullPage.js/2.6.4/jquery.fullPage.min.css">
     <link href="stylesheets/global.css" rel="stylesheet">
     <link rel="icon" type="image/x-icon" href="img/fav.ico">
 
     <title>Suntech-lv</title>
 </head>
-<body id="page_top">
-    <nav class="navbar navbar-default">
-        <div class="container-fluid">
-            <!-- Brand and toggle get grouped for better mobile display -->
-            <div class="navbar-header">
-                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
-                    <span class="sr-only">Toggle navigation</span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                </button>
-                <div class="navbar-brand">
-                    <a href="#page_top"><img src="img/suntech-LOGO-LIGHT-LONG.svg" alt="suntech logo"/></a>
-                </div>
+<body>
+
+    <button class="hamburger"><span></span><span></span><span></span></button>
+
+    <ul class="menu display_none">
+        <li id="close"><button>&times;</button></li>
+        <li data-menuanchor="firstPage"><a href="#firstPage">Par mums</a></li>
+        <li data-menuanchor="secondPage"><a href="#secondPage">Kapēc svarīgi?</a></li>
+        <li data-menuanchor="3rdPage"><a href="#3rdPage">Pakalpojumi</a></li>
+        <li data-menuanchor="4thpage"><a href="#4thpage">Partneri</a></li>
+        <li data-menuanchor="lastPage"><a href="#lastPage">Kontakti</a></li>
+    </ul>
+
+    <div class="logo"><img src="img/suntechlv_logo2v.svg" alt="logo"/></div>
+
+    <div id="fullpage">
+
+        <div class="intro section" data-anchor="firstPage">
+
+            <div class="left">
+
+                <!--<div class="overlay"></div>-->
+                <video preload="auto" autoplay loop muted preload="auto">
+                    <source src="img/sample_suntech.mp4" type="video/mp4">
+                </video>
             </div>
 
-            <!-- Collect the nav links, forms, and other content for toggling -->
-            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+            <div class="right">
 
-                <ul class="nav navbar-nav navbar-right">
-                    <li><a href="#aprikojums">Mūsu aprīkojums</a></li>
-                    <li><a href="#par_mums">Par mums</a></li>
-                    <li><a href="#google_map">Kontakti</a></li>
-                </ul>
+                <h1>Par mums</h1>
 
-            </div><!-- /.navbar-collapse -->
-        </div><!-- /.container-fluid -->
-    </nav>
+                <div class="intro_img"><img src="img/sample_group.jpg" alt="sample"/></div>
 
-    <section class="first_fold">
-        <div class="vid_overlay flex horizontal_center">
-            <div class="vertical_center flex">
-                <h2 class="text_grey">ĪSTAJĀ VIETĀ UN LAIKĀ</h2>
-                <a href="tel:+371 26 726777"><h1 class="text_light strong">+371 26 726777</h1></a>
-                <h2 class="text_grey">JUMTU DIAGNOSTIKA UN REMONTS</h2>
-            </div>
-        </div>
-        <video class="video_bg" loop autoplay>
-            <source src="img/video_bg_2015_short_v4_1mbs.mp4" type="video/mp4">
-        </video>
-    </section>
-
-    <section id="aprikojums" class="aprikojums flex horizontal_center padding">
-        <h1 class="dark_h">Aprikojums</h1>
-        <div class="wrapper"></div>
-    </section>
-
-    <section id="par_mums" class="par_mums flex horizontal_center padding">
-        <h1>Par mums</h1>
-        <div class="wrapper"></div>
-    </section>
-
-    <section class="partners flex horizontal_center padding">
-        <h1 class="dark_h">MŪSU PARTNERI</h1>
-        <div class="width_1280 wrapper flex horizontal_center">
-            <a href="#"><img src="img/logo_isolate_red.svg" alt="1"/></a>
-            <a href="#"><img src="img/logo_isolate_red.svg" alt="1"/></a>
-            <a href="#"><img src="img/logo_isolate_red.svg" alt="1"/></a>
-            <a href="#"><img src="img/logo_isolate_red.svg" alt="1"/></a>
-            <a href="#"><img src="img/logo_isolate_red.svg" alt="1"/></a>
-            <a href="#"><img src="img/logo_isolate_red.svg" alt="1"/></a>
-            <a href="#"><img src="img/logo_isolate_red.svg" alt="1"/></a>
-            <a href="#"><img src="img/logo_isolate_red.svg" alt="1"/></a>
-        </div>
-    </section>
-
-    <section id="google_map"></section>
-
-
-
-
-    <footer class="flex horizontal_center">
-        <div class="width_1280 flex wrapper horizontal_center">
-            <div class="rekviziti flex vertical_center">
-                <h4>SIA "SUNTECH-LV"</h4>
-                <h4>Reg.Nr.: LV 40003987004</h4>
-                <h4>Adrese: Zaļenieku iela 11, Riga, LV-1058</h4>
-                <h4>Banka: Swedbank AS</h4>
-                <h4>Kods: HABALV22</h4>
-                <h4>Konts: LV62HABA0551036299017</h4>
-            </div>
-
-            <div class="social_media flex vertical_center horizontal_center">
-                <ul class="social_nav flex vertical_center">
-                    <li><a href="https://www.facebook.com/avector.lv" class="icons-fb">Facebook</a></li>
-                    <li><a href="https://twitter.com/Avector?lang=en" class="icons-tw">Twitter</a></li>
-                    <li><a href="#" class="icons-in">Linkedin</a></li>
-                </ul>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                    Beatae consectetur, dignissimos doloremque ea esse harum incidunt inventore ipsam labore, libero neque qui quisquam ratione recusandae sapiente similique ullam unde voluptatem!
+                    Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                    Beatae consectetur, dignissimos doloremque ea esse harum incidunt inventore ipsam labore, libero neque qui quisquam ratione recusandae sapiente similique ullam unde voluptatem!
+                    Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                    Beatae consectetur, dignissimos doloremque ea esse harum incidunt inventore ipsam labore, libero neque qui quisquam ratione recusandae sapiente similique ullam unde voluptatem!
+                </p>
             </div>
         </div>
 
-        <div class="copyrights flex horizontal_center">
-            <p>© 2015 Suntech-lv.</p>
-            <a href="#">Terms & agreements</a>
-        </div>
-    </footer>
+        <div class="svarigi section" data-anchor="secondPage">
 
-    <script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDkupYPctjIkfJybpHvbas6OH2l-DExsB0"></script>
-    <script type="text/javascript" src="js/gmap.js"></script>
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/js/bootstrap.min.js"></script>
-    <script type="text/javascript" src="js/scroll.js"></script>
+            <h1>Kapēc svarīgi?</h1>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                Beatae consectetur, dignissimos doloremque ea esse harum incidunt inventore ipsam labore, libero neque qui quisquam ratione recusandae sapiente similique ullam unde voluptatem!
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+            </p>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                Beatae consectetur, dignissimos doloremque ea esse harum incidunt inventore ipsam labore, libero neque qui quisquam ratione recusandae sapiente similique ullam unde voluptatem!
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+            </p>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                Beatae consectetur, dignissimos doloremque ea esse harum incidunt inventore ipsam labore, libero neque qui quisquam ratione recusandae sapiente similique ullam unde voluptatem!
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+            </p>
+        </div>
+
+        <div class="pakalpojumi section" data-anchor="3rdPage">
+            <div style="background: lightblue" class="test"></div>
+            <div style="background: lightcoral" class="test"></div>
+            <div style="background: lightgoldenrodyellow" class="test"></div>
+            <div style="background: lightgreen" class="test"></div>
+            <div style="background: lightslategray" class="test"></div>
+        </div>
+        
+        <div class="section" data-anchor="4thpage">Some section</div>
+        <div class="section" data-anchor="lastPage">Some section</div>
+    </div>
+
+
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/fullPage.js/2.6.4/jquery.fullPage.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/fullPage.js/2.6.4/vendors/jquery.slimscroll.min.js"></script>
+    <script type="text/javascript">
+
+        //Initialize fullpage.js ------------------------------------------------
+        $(document).ready(function() {
+            $('#fullpage').fullpage({
+                sectionsColor: ['#2A67B2', '#f7f7f7', '#2A67B2', 'f7f7f7', '#ccddff'],
+                anchors: ['firstPage', 'secondPage', '3rdPage', '4thpage', 'lastPage'],
+                menu: '#menu',
+                scrollingSpeed: 1000,
+                afterRender: function(){
+                    $('video')[0].play();
+                },
+
+                /*'afterLoad': function (anchorLink, index) {
+                    //for section 2...
+                    if (index == 2) {
+                        $(".svarigi p").each(function(i){
+
+                            setTimeout(function() {
+                                $(".svarigi p").eq(i).addClass("fade_in");
+                            }, 150 * (i+1));
+                        });
+                    }
+                }*/
+
+                'onLeave': function (index, nextIndex, direction) {
+                    //going from section 1 to 2
+                    if (index == 1 && direction == 'down') {
+                        $(".svarigi p").each(function(i){
+
+                            setTimeout(function() {
+                                $(".svarigi p").eq(i).addClass("fade_in");
+                            }, 300 * (i+1));
+                        });
+                    }
+                }
+            });
+        });
+
+        //Menu action ------------------------------------------------
+        $(".hamburger").click(function(){
+            $(".menu").fadeIn("fast");
+        });
+
+        $("#close").click(function(){
+           $(".menu").fadeOut("fast");
+        });
+
+        /*//FF movement ------------------------------------------------
+        $(".left").hover(function () {
+            $(this).css({"width": "55%"});
+            $(".right").css({"width": "45%"});
+        });
+
+        $(".right").hover(function(){
+           $(this).css({"width": "55%"});
+            $(".left").css({"width": "45%"});
+        });*/
+    </script>
 </body>
 </html>
