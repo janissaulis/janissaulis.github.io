@@ -38,5 +38,15 @@ p {
 }
 
 .section {
-  height: 100vh;
+  height: 100vh !important;
+}
+
+.footer_overlay_hidden {
+  opacity: 0;
+  transform: translateX(400px);
+}
+
+.footer_overlay_visible {
+  opacity: 1;
+  transform: translateX(0px);
 }

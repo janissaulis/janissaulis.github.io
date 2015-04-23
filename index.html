@@ -13,6 +13,18 @@
 </head>
 <body>
 
+    <!--Facebook SDK-->
+    <div id="fb-root"></div>
+    <script>(function(d, s, id) {
+        var js, fjs = d.getElementsByTagName(s)[0];
+        if (d.getElementById(id)) return;
+        js = d.createElement(s); js.id = id;
+        js.src = "//connect.facebook.net/en_US/sdk.js#xfbml=1&version=v2.3";
+        fjs.parentNode.insertBefore(js, fjs);
+    }(document, 'script', 'facebook-jssdk'));</script>
+
+    <!------------------------------------------------------------------------------------------>
+
     <button class="hamburger"><span></span><span></span><span></span></button>
 
     <ul class="menu display_none">
@@ -20,17 +32,16 @@
         <li data-menuanchor="firstPage"><a href="#firstPage">Par mums</a></li>
         <li data-menuanchor="secondPage"><a href="#secondPage">Kapēc svarīgi?</a></li>
         <li data-menuanchor="3rdPage"><a href="#3rdPage">Pakalpojumi</a></li>
-        <li data-menuanchor="4thpage"><a href="#4thpage">Partneri</a></li>
         <li data-menuanchor="lastPage"><a href="#lastPage">Kontakti</a></li>
     </ul>
-
-    <div class="logo"><img src="img/suntechlv_logo2v.svg" alt="logo"/></div>
 
     <div id="fullpage">
 
         <div class="intro section" data-anchor="firstPage">
 
             <div class="left">
+
+                <div class="logo"><img src="img/suntechlv_logo2v.svg" alt="logo"/></div>
 
                 <!--<div class="overlay"></div>-->
                 <video preload="auto" autoplay loop muted preload="auto">
@@ -72,45 +83,54 @@
         </div>
 
         <div class="pakalpojumi section" data-anchor="3rdPage">
-            <div style="background: lightblue" class="test"></div>
-            <div style="background: lightcoral" class="test"></div>
-            <div style="background: lightgoldenrodyellow" class="test"></div>
-            <div style="background: lightgreen" class="test"></div>
-            <div style="background: lightslategray" class="test"></div>
         </div>
-        
-        <div class="section" data-anchor="4thpage">Some section</div>
-        <div class="section" data-anchor="lastPage">Some section</div>
+
+        <div class="kontakti section" data-anchor="lastPage">
+
+            <div class="footer_overlay footer_overlay_hidden">
+
+                <h1>Kontakti</h1>
+
+
+
+                <h2><span>Uzņēmums: </span>SIA "Suntech.lv"</h2>
+                <h2><span>Adrese: </span>Graudu iela 33, Rīga, Latvija</h2>
+                <h2><span>Tel: </span>29363547</h2>
+                <h2><span>E-pasts: </span>suntech.lv@gmail.com</h2>
+
+                <div class="fb">
+                    <div class="fb-page" data-href="https://www.facebook.com/suntech.lv" data-width="340px" data-hide-cover="false" data-show-facepile="true" data-show-posts="false"><div class="fb-xfbml-parse-ignore"><blockquote cite="https://www.facebook.com/suntech.lv"><a href="https://www.facebook.com/suntech.lv">Suntech.lv</a></blockquote></div></div>
+                </div>
+
+                <footer><p>© 2015 Suntech.lv.</p></footer>
+            </div>
+
+            <div class="footer_map">
+                <div id="google_map"></div>
+            </div>
+        </div>
     </div>
 
 
     <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/fullPage.js/2.6.4/jquery.fullPage.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/fullPage.js/2.6.4/vendors/jquery.slimscroll.min.js"></script>
+    <script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDkupYPctjIkfJybpHvbas6OH2l-DExsB0"></script>
+    <script type="text/javascript" src="js/gmap.js"></script>
     <script type="text/javascript">
 
         //Initialize fullpage.js ------------------------------------------------
         $(document).ready(function() {
             $('#fullpage').fullpage({
-                sectionsColor: ['#2A67B2', '#f7f7f7', '#2A67B2', 'f7f7f7', '#ccddff'],
-                anchors: ['firstPage', 'secondPage', '3rdPage', '4thpage', 'lastPage'],
+                sectionsColor: ['#2A67B2', '#f7f7f7', '#2A67B2', '#f7f7f7'],
+                anchors: ['firstPage', 'secondPage', '3rdPage', 'lastPage'],
                 menu: '#menu',
                 scrollingSpeed: 1000,
                 afterRender: function(){
                     $('video')[0].play();
                 },
 
-                /*'afterLoad': function (anchorLink, index) {
-                    //for section 2...
-                    if (index == 2) {
-                        $(".svarigi p").each(function(i){
-
-                            setTimeout(function() {
-                                $(".svarigi p").eq(i).addClass("fade_in");
-                            }, 150 * (i+1));
-                        });
-                    }
-                }*/
+                //Fade in content for sections ---------------------------------------------------------
 
                 'onLeave': function (index, nextIndex, direction) {
                     //going from section 1 to 2
@@ -121,8 +141,18 @@
                                 $(".svarigi p").eq(i).addClass("fade_in");
                             }, 300 * (i+1));
                         });
+                        //going from section 3 to 4
+                    }  else if (index == 3 && direction == 'down') {
+                        $(".footer_overlay").removeClass("footer_overlay_hidden").addClass("footer_overlay_visible");
                     }
-                }
+                },
+
+                'afterLoad': function (anchorLink, index) {
+                 //for section 4
+                 if (index == 4) {
+                     $(".footer_overlay").removeClass("footer_overlay_hidden").addClass("footer_overlay_visible");
+                     }
+                 }
             });
         });
 

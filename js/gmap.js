@@ -11,9 +11,9 @@ function initialize() {
         mapTypeControl: false,
         scaleControl: false,
         scrollwheel: false,
-        draggable: false,
-        panControl: true
-
+        draggable: true,
+        panControl: true,
+        zoomControl: true
     };
 
     map = new google.maps.Map(document.getElementById('google_map'),
