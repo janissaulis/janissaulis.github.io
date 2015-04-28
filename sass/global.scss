@@ -94,7 +94,8 @@ ul.menu {
   }
 
   .left {
-    background: lightskyblue;
+    background: url("../img/sample_suntech_still.jpg");
+    background-size: cover;
     overflow: hidden;
     position: relative;
 
@@ -114,13 +115,21 @@ ul.menu {
   }
 
   .right {
-    background: url("../img/sample_group_png.png");
+    background: url("../img/sample_group_png.png") $color_blue;
     background-size: cover;
     text-align: center;
-    padding: 50px 50px 0;
+    padding: 50px 100px 0;
+
+    .fade_in {
+      opacity: 1;
+      transform: translateX(0px);
+    }
 
     p {
       margin-top: 50px;
+      opacity: 0;
+      transition: .6s ease-out;
+      transform: translateX(-50px);
     }
 
     .intro_img {
@@ -148,8 +157,8 @@ ul.menu {
 //SVARIGI
 
 .svarigi {
-  padding: 0 30%;
-  background: url("../img/shingle-roof.png") no-repeat;
+  padding: 0 0 0 12%;
+  background: url("../img/sample-roof.jpg") no-repeat;
   background-size: cover;
 
   .fade_in {
@@ -157,10 +166,14 @@ ul.menu {
     transform: translateX(0px);
   }
 
+  .content_left {
+    width: 24%;
+  }
+
   p {
     text-align: justify;
     color: $color_blue;
-    font-size: 1.25em;
+    font-size: 1em;
     margin-bottom: 30px;
     opacity: 0;
     transition: .4s;
@@ -181,8 +194,7 @@ ul.menu {
 
   h1 {
     color: $color_blue_dark;
-    text-align: center;
-    margin-bottom: 100px;
+    margin-bottom: 50px;
   }
 }
 
@@ -191,6 +203,78 @@ ul.menu {
 //PAKALPOJUMI
 
 .pakalpojumi {
+  padding: 0;
+  background: url("../img/sample_pakalpojumi.jpg");
+  background-size: cover;
+  position: relative;
+
+  .content_middle {
+    width: auto;
+    height: auto;
+    //background: $color_blue;
+    position: absolute;
+    bottom: 30%;
+    left: 0;
+    right: 0;
+    text-align: center;
+
+    .pakalpojumi_cell {
+      //background: rgba($color_blue, .97);
+      width: 200px;
+      height: 200px;
+      margin: 30px;
+      transition: .4s;
+      position: relative;
+      display: inline-block;
+
+
+      p {
+        width: 100%;
+        padding: 0 10px;
+        top: 85px;
+        font-size: 1.25em;
+        text-align: center;
+        position: absolute;
+        z-index: 4;
+      }
+
+      .pakalpojumi_img {
+        width: 100%;
+        height: 100%;
+        //background: lightcoral;
+        position: absolute;
+        overflow: hidden;
+
+        .pakalpojumi_overlay {
+          width: 100%;
+          height: 100%;
+          background: rgba($color_blue_dark, .9);
+          position: absolute;
+          z-index: 3;
+          border-radius: 100%;
+          border: 3px solid $color_light;
+        }
+
+        video,
+        img {
+          width: 100%;
+          height: 100%;
+          position: absolute;
+          top: 0;
+          left: 0;
+          border-radius: 100%;
+        }
+
+        video {
+          z-index: 2;
+        }
+
+        img {
+          z-index: 1;
+        }
+      }
+    }
+  }
 }
 
 
@@ -210,7 +294,7 @@ ul.menu {
     right: 0;
     z-index: 100;
     padding: 80px 0 0 30px;
-    transition: .8s;
+    transition: .5s;
 
     h2 {
       font-size: 1.25em;

@@ -50,3 +50,19 @@ p {
   opacity: 1;
   transform: translateX(0px);
 }
+
+.btcf:after {
+  content:"";
+  display:table;
+  clear:both;
+}
+
+.opacity_0 {
+  opacity: 0;
+  transform: translateY(100px);
+}
+
+.opacity_1 {
+  opacity: 1;
+  transform: translateX(0);
+}

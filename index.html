@@ -67,22 +67,92 @@
 
         <div class="svarigi section" data-anchor="secondPage">
 
-            <h1>Kapēc svarīgi?</h1>
-            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-                Beatae consectetur, dignissimos doloremque ea esse harum incidunt inventore ipsam labore, libero neque qui quisquam ratione recusandae sapiente similique ullam unde voluptatem!
-                Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-            </p>
-            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-                Beatae consectetur, dignissimos doloremque ea esse harum incidunt inventore ipsam labore, libero neque qui quisquam ratione recusandae sapiente similique ullam unde voluptatem!
-                Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-            </p>
-            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-                Beatae consectetur, dignissimos doloremque ea esse harum incidunt inventore ipsam labore, libero neque qui quisquam ratione recusandae sapiente similique ullam unde voluptatem!
-                Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-            </p>
+            <div class="content_left">
+                <h1>Kapēc svarīgi?</h1>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                    Beatae consectetur, dignissimos doloremque ea esse harum incidunt inventore ipsam labore, libero neque qui quisquam ratione recusandae sapiente similique ullam unde voluptatem!
+                    Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                </p>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                    Beatae consectetur, dignissimos doloremque ea esse harum incidunt inventore ipsam labore, libero neque qui quisquam ratione recusandae sapiente similique ullam unde voluptatem!
+                    Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                </p>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                    Beatae consectetur, dignissimos doloremque ea esse harum incidunt inventore ipsam labore, libero neque qui quisquam ratione recusandae sapiente similique ullam unde voluptatem!
+                    Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                </p>
+            </div>
         </div>
 
         <div class="pakalpojumi section" data-anchor="3rdPage">
+
+            <div class="content_middle">
+
+                <div class="pakalpojumi_cell btcf opacity_0">
+
+                    <p>Jumta tehniskā stāvokļa novērtēšana</p>
+                    <div class="pakalpojumi_img">
+
+                        <div class="pakalpojumi_overlay"></div>
+                        <video class="vthumb" preload="auto" autoplay loop muted preload="auto">
+                            <source src="img/video_thumbs/sample_128.mp4" type="video/mp4">
+                        </video>
+                        <img src="img/video_thumbs/sample_128_still.jpg" alt="1"/>
+                    </div>
+                </div>
+
+                <div class="pakalpojumi_cell btcf opacity_0">
+
+                    <p>Projektu tehnisko mezglu izstrāde</p>
+                    <div class="pakalpojumi_img">
+
+                        <div class="pakalpojumi_overlay"></div>
+                        <video class="vthumb" preload="auto" autoplay loop muted preload="auto">
+                            <source src="img/video_thumbs/sample_128.mp4" type="video/mp4">
+                        </video>
+                        <img src="img/video_thumbs/sample_128_still.jpg" alt="1"/>
+                    </div>
+                </div>
+
+                <div class="pakalpojumi_cell btcf opacity_0">
+
+                    <p>Jumtu darbu uzraudzība</p>
+                    <div class="pakalpojumi_img">
+
+                        <div class="pakalpojumi_overlay"></div>
+                        <video class="vthumb" preload="auto" autoplay loop muted preload="auto">
+                            <source src="img/video_thumbs/sample_128.mp4" type="video/mp4">
+                        </video>
+                        <img src="img/video_thumbs/sample_128_still.jpg" alt="1"/>
+                    </div>
+                </div>
+
+                <div class="pakalpojumi_cell btcf opacity_0">
+
+                    <p>Eksperta szlēdziena sagatavošana</p>
+                    <div class="pakalpojumi_img">
+
+                        <div class="pakalpojumi_overlay"></div>
+                        <video class="vthumb" preload="auto" autoplay loop muted preload="auto">
+                            <source src="img/video_thumbs/sample_128.mp4" type="video/mp4">
+                        </video>
+                        <img src="img/video_thumbs/sample_128_still.jpg" alt="1"/>
+                    </div>
+                </div>
+
+                <div class="pakalpojumi_cell btcf opacity_0">
+
+                    <p>Hidroizolācijas bojājumu noteikšana</p>
+                    <div class="pakalpojumi_img">
+
+                        <div class="pakalpojumi_overlay"></div>
+                        <video class="vthumb" preload="auto" autoplay loop muted preload="auto">
+                            <source src="img/video_thumbs/sample_128.mp4" type="video/mp4">
+                        </video>
+                        <img src="img/video_thumbs/sample_128_still.jpg" alt="1"/>
+                    </div>
+                </div>
+            </div>
         </div>
 
         <div class="kontakti section" data-anchor="lastPage">
@@ -126,9 +196,6 @@
                 anchors: ['firstPage', 'secondPage', '3rdPage', 'lastPage'],
                 menu: '#menu',
                 scrollingSpeed: 1000,
-                afterRender: function(){
-                    $('video')[0].play();
-                },
 
                 //Fade in content for sections ---------------------------------------------------------
 
@@ -141,16 +208,39 @@
                                 $(".svarigi p").eq(i).addClass("fade_in");
                             }, 300 * (i+1));
                         });
-                        //going from section 3 to 4
-                    }  else if (index == 3 && direction == 'down') {
-                        $(".footer_overlay").removeClass("footer_overlay_hidden").addClass("footer_overlay_visible");
+                        //going from section 2 to 3
+                    }  else if (index == 2 && direction == 'down') {
+                        $(".pakalpojumi_cell").each(function(i){
+
+                            setTimeout(function() {
+                                $(".pakalpojumi_cell").eq(i).removeClass("opacity_0").addClass("opacity_1");
+                            }, 200 * (i+1));
+                        });
                     }
+                },
+
+                afterRender: function(){
+
+                    for (var i = 0; i < $("video").length; i++) {
+                        $("video")[i].play();
+                    }
+
+                    $(".right p").addClass("fade_in");
                 },
 
                 'afterLoad': function (anchorLink, index) {
                  //for section 4
-                 if (index == 4) {
-                     $(".footer_overlay").removeClass("footer_overlay_hidden").addClass("footer_overlay_visible");
+                     if (index == 4) {
+
+                         $(".footer_overlay").removeClass("footer_overlay_hidden").addClass("footer_overlay_visible");
+
+                     } else if (index == 3) {
+                         $(".pakalpojumi_cell").each(function(i){
+
+                             setTimeout(function() {
+                                 $(".pakalpojumi_cell").eq(i).removeClass("opacity_0").addClass("opacity_1");
+                             }, 200 * (i+1));
+                         });
                      }
                  }
             });
