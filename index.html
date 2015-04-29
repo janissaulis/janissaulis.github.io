@@ -39,29 +39,14 @@
 
         <div class="intro section" data-anchor="firstPage">
 
-            <div class="left">
+            <div class="logo"><img src="img/suntechlv_logo2v.svg" alt="logo"/></div>
 
-                <div class="logo"><img src="img/suntechlv_logo2v.svg" alt="logo"/></div>
+            <div class="ff_video">
 
-                <!--<div class="overlay"></div>-->
+                <div class="overlay"></div>
                 <video preload="auto" autoplay loop muted preload="auto">
-                    <source src="img/sample_suntech.mp4" type="video/mp4">
+                    <source src="img/sample_suntechlv.mp4" type="video/mp4">
                 </video>
-            </div>
-
-            <div class="right">
-
-                <h1>Par mums</h1>
-
-                <div class="intro_img"><img src="img/sample_group.jpg" alt="sample"/></div>
-
-                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-                    Beatae consectetur, dignissimos doloremque ea esse harum incidunt inventore ipsam labore, libero neque qui quisquam ratione recusandae sapiente similique ullam unde voluptatem!
-                    Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-                    Beatae consectetur, dignissimos doloremque ea esse harum incidunt inventore ipsam labore, libero neque qui quisquam ratione recusandae sapiente similique ullam unde voluptatem!
-                    Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-                    Beatae consectetur, dignissimos doloremque ea esse harum incidunt inventore ipsam labore, libero neque qui quisquam ratione recusandae sapiente similique ullam unde voluptatem!
-                </p>
             </div>
         </div>
 
@@ -86,14 +71,18 @@
 
         <div class="pakalpojumi section" data-anchor="3rdPage">
 
-            <div class="content_middle">
+            <div class="content_middle opacity_0">
 
-                <div class="pakalpojumi_cell btcf opacity_0">
+                <h1>Pakalpojumi</h1>
+                <h2>
+                    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ab aspernatur consectetur ea eius eos harum itaque molestiae nam, possimus!
+                    Architecto dolor ipsum iure nesciunt numquam pariatur perferendis quaerat ratione suscipit!
+                </h2>
 
+                <div class="pakalpojumi_cell opacity_0">
                     <p>Jumta tehniskā stāvokļa novērtēšana</p>
                     <div class="pakalpojumi_img">
 
-                        <div class="pakalpojumi_overlay"></div>
                         <video class="vthumb" preload="auto" autoplay loop muted preload="auto">
                             <source src="img/video_thumbs/sample_128.mp4" type="video/mp4">
                         </video>
@@ -101,12 +90,10 @@
                     </div>
                 </div>
 
-                <div class="pakalpojumi_cell btcf opacity_0">
-
+                <div class="pakalpojumi_cell opacity_0">
                     <p>Projektu tehnisko mezglu izstrāde</p>
                     <div class="pakalpojumi_img">
 
-                        <div class="pakalpojumi_overlay"></div>
                         <video class="vthumb" preload="auto" autoplay loop muted preload="auto">
                             <source src="img/video_thumbs/sample_128.mp4" type="video/mp4">
                         </video>
@@ -114,12 +101,10 @@
                     </div>
                 </div>
 
-                <div class="pakalpojumi_cell btcf opacity_0">
-
+                <div class="pakalpojumi_cell opacity_0">
                     <p>Jumtu darbu uzraudzība</p>
                     <div class="pakalpojumi_img">
 
-                        <div class="pakalpojumi_overlay"></div>
                         <video class="vthumb" preload="auto" autoplay loop muted preload="auto">
                             <source src="img/video_thumbs/sample_128.mp4" type="video/mp4">
                         </video>
@@ -127,12 +112,10 @@
                     </div>
                 </div>
 
-                <div class="pakalpojumi_cell btcf opacity_0">
-
+                <div class="pakalpojumi_cell opacity_0">
                     <p>Eksperta szlēdziena sagatavošana</p>
                     <div class="pakalpojumi_img">
 
-                        <div class="pakalpojumi_overlay"></div>
                         <video class="vthumb" preload="auto" autoplay loop muted preload="auto">
                             <source src="img/video_thumbs/sample_128.mp4" type="video/mp4">
                         </video>
@@ -140,12 +123,10 @@
                     </div>
                 </div>
 
-                <div class="pakalpojumi_cell btcf opacity_0">
-
+                <div class="pakalpojumi_cell opacity_0">
                     <p>Hidroizolācijas bojājumu noteikšana</p>
                     <div class="pakalpojumi_img">
 
-                        <div class="pakalpojumi_overlay"></div>
                         <video class="vthumb" preload="auto" autoplay loop muted preload="auto">
                             <source src="img/video_thumbs/sample_128.mp4" type="video/mp4">
                         </video>
@@ -214,8 +195,11 @@
 
                             setTimeout(function() {
                                 $(".pakalpojumi_cell").eq(i).removeClass("opacity_0").addClass("opacity_1");
-                            }, 200 * (i+1));
+                            }, 240 * (i+1));
                         });
+                        $(".content_middle").removeClass("opacity_0").addClass("opacity_1 add_bg");
+                    } else if (index == 3 && direction == 'down') {
+                        $(".footer_overlay").removeClass("footer_overlay_hidden").addClass("footer_overlay_visible");
                     }
                 },
 
@@ -241,6 +225,7 @@
                                  $(".pakalpojumi_cell").eq(i).removeClass("opacity_0").addClass("opacity_1");
                              }, 200 * (i+1));
                          });
+                         $(".content_middle").removeClass("opacity_0").addClass("opacity_1 add_bg");
                      }
                  }
             });
@@ -254,17 +239,6 @@
         $("#close").click(function(){
            $(".menu").fadeOut("fast");
         });
-
-        /*//FF movement ------------------------------------------------
-        $(".left").hover(function () {
-            $(this).css({"width": "55%"});
-            $(".right").css({"width": "45%"});
-        });
-
-        $(".right").hover(function(){
-           $(this).css({"width": "55%"});
-            $(".left").css({"width": "45%"});
-        });*/
     </script>
 </body>
 </html>

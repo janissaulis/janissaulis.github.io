@@ -13,7 +13,8 @@ function initialize() {
         scrollwheel: false,
         draggable: true,
         panControl: true,
-        zoomControl: true
+        zoomControl: true,
+        styles: [{"featureType":"all","stylers":[{"saturation":-50},{"hue":"#16355d"}]},{"featureType":"road","stylers":[{"saturation":0}]},{"featureType":"transit","stylers":[{"visibility":"off"}]},{"featureType":"poi","stylers":[{"visibility":"off"}]},{"featureType":"water","stylers":[{"visibility":"simplified"},{"saturation":-40}]}]
     };
 
     map = new google.maps.Map(document.getElementById('google_map'),

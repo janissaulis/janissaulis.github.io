@@ -20,14 +20,6 @@ $color_medium_light: #c6c6c6;
   text-decoration: none !important;
 }
 
-.left,
-.right {
-  height: 100vh;
-  width: 50%;
-  float: left;
-  transition: .6s;
-}
-
 button {
   background: none;
   border: none;
@@ -65,4 +57,12 @@ p {
 .opacity_1 {
   opacity: 1;
   transform: translateX(0);
+}
+
+.add_bg {
+  background: rgba($color_blue, .9);
+}
+
+.fp-tableCell {
+  padding: 0;
 }
