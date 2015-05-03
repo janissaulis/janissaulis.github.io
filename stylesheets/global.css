@@ -60,6 +60,11 @@ p {
 }
 
 /* line 66, ../sass/_imports.scss */
+.add_bg_w {
+  background: white;
+}
+
+/* line 70, ../sass/_imports.scss */
 .fp-tableCell {
   padding: 0;
 }
@@ -88,7 +93,7 @@ button.hamburger span {
 }
 
 /* line 30, ../sass/global.scss */
-ul.menu {
+.menu {
   position: fixed;
   top: 0;
   right: 0;
@@ -96,29 +101,65 @@ ul.menu {
   background: rgba(28, 69, 120, 0.98);
   width: 400px;
   height: 100%;
-  padding: 50px 0 0;
   display: none;
 }
-/* line 41, ../sass/global.scss */
-ul.menu button {
+/* line 40, ../sass/global.scss */
+.menu ul {
+  padding: 0;
+  margin: 50px 0;
+}
+/* line 45, ../sass/global.scss */
+.menu a.active {
+  background: #2A67B2;
+}
+/* line 49, ../sass/global.scss */
+.menu ul.lang {
+  margin: 100px auto 0;
+  text-align: center;
+  position: absolute;
+  bottom: 100px;
+  left: 0;
+  right: 0;
+}
+/* line 58, ../sass/global.scss */
+.menu ul.lang li {
+  display: inline-block;
+  margin: 0 10px;
+  height: 48px;
+  width: 48px;
+}
+/* line 64, ../sass/global.scss */
+.menu ul.lang li a {
+  padding: 12px 0 0;
+  height: 100%;
+  width: 100%;
+  border-radius: 100%;
+  border: 1px solid #2A67B2;
+}
+/* line 72, ../sass/global.scss */
+.menu ul.lang li a:hover {
+  background: #2A67B2;
+}
+/* line 79, ../sass/global.scss */
+.menu button {
   padding: 0;
   margin: 0;
   font-size: 3em;
   color: #aad4ef;
   width: 100%;
 }
-/* line 49, ../sass/global.scss */
-ul.menu button:hover {
+/* line 87, ../sass/global.scss */
+.menu button:hover {
   color: #f7f7f7;
-  background: #16355d;
+  background: #2A67B2;
 }
-/* line 55, ../sass/global.scss */
-ul.menu li {
+/* line 93, ../sass/global.scss */
+.menu li {
   margin: 0;
   text-align: center;
 }
-/* line 60, ../sass/global.scss */
-ul.menu a {
+/* line 98, ../sass/global.scss */
+.menu a {
   color: #aad4ef;
   font-size: 1.25em;
   transition: .4s;
@@ -127,19 +168,19 @@ ul.menu a {
   height: 60px;
   padding: 15px 0 0;
 }
-/* line 69, ../sass/global.scss */
-ul.menu a:hover {
+/* line 107, ../sass/global.scss */
+.menu a:hover {
   color: #f7f7f7;
-  background: #16355d;
+  background: #2A67B2;
 }
 
-/* line 79, ../sass/global.scss */
+/* line 117, ../sass/global.scss */
 .intro {
   height: 100vh;
   width: 100vw;
   overflow: hidden;
 }
-/* line 84, ../sass/global.scss */
+/* line 122, ../sass/global.scss */
 .intro .logo {
   position: fixed;
   top: 10px;
@@ -149,18 +190,38 @@ ul.menu a:hover {
   z-index: 10;
   transition: .4s;
 }
-/* line 93, ../sass/global.scss */
+/* line 131, ../sass/global.scss */
 .intro .logo img {
   max-width: 100%;
   max-height: 100%;
 }
-/* line 99, ../sass/global.scss */
+/* line 137, ../sass/global.scss */
+.intro .cta {
+  position: fixed;
+  bottom: 35%;
+  left: 0;
+  right: 0;
+  margin: 0 auto;
+  text-align: center;
+  z-index: 3;
+  width: 60%;
+}
+/* line 148, ../sass/global.scss */
+.intro .cta h1 {
+  color: #f7f7f7;
+}
+/* line 152, ../sass/global.scss */
+.intro .cta a {
+  font-size: 2.25em;
+  color: #aad4ef;
+}
+/* line 158, ../sass/global.scss */
 .intro .ff_video {
   width: 100%;
   height: 100vh;
   overflow: hidden;
 }
-/* line 105, ../sass/global.scss */
+/* line 164, ../sass/global.scss */
 .intro .ff_video .overlay {
   position: fixed;
   width: 100%;
@@ -170,34 +231,36 @@ ul.menu a:hover {
   left: 0;
   z-index: 2;
 }
-/* line 115, ../sass/global.scss */
+/* line 174, ../sass/global.scss */
 .intro .ff_video video {
-  width: 100%;
+  min-width: 100vw;
+  min-height: 100vh;
+  width: auto;
+  height: auto;
   background-size: cover;
   margin: 0;
   padding: 0;
 }
 
-/* line 128, ../sass/global.scss */
+/* line 190, ../sass/global.scss */
 .svarigi {
   padding: 0;
-  height: 100vh;
   background: url("../img/sample_roof.jpg") no-repeat;
   background-size: cover;
 }
-/* line 134, ../sass/global.scss */
+/* line 195, ../sass/global.scss */
 .svarigi .fade_in {
   opacity: 1;
   transform: translateX(0px);
 }
-/* line 139, ../sass/global.scss */
+/* line 200, ../sass/global.scss */
 .svarigi .content_left {
   width: 28%;
   height: 100vh;
   padding: 10% 50px 0;
   background: rgba(42, 103, 178, 0.9);
 }
-/* line 146, ../sass/global.scss */
+/* line 207, ../sass/global.scss */
 .svarigi p {
   text-align: justify;
   color: #f7f7f7;
@@ -207,7 +270,7 @@ ul.menu a:hover {
   transition: .4s;
   transform: translateX(-50px);
 }
-/* line 155, ../sass/global.scss */
+/* line 216, ../sass/global.scss */
 .svarigi p::before {
   content: "";
   display: inline-block;
@@ -219,20 +282,20 @@ ul.menu a:hover {
   border-top-right-radius: 10px;
   border-bottom-left-radius: 10px;
 }
-/* line 168, ../sass/global.scss */
+/* line 229, ../sass/global.scss */
 .svarigi h1 {
   color: white;
   margin: 0 0 50px;
 }
 
-/* line 178, ../sass/global.scss */
+/* line 239, ../sass/global.scss */
 .pakalpojumi {
   padding: 0;
   background: url("../img/sample_pakalpojumi.jpg");
   background-size: cover;
   position: relative;
 }
-/* line 184, ../sass/global.scss */
+/* line 245, ../sass/global.scss */
 .pakalpojumi .content_middle {
   width: 100%;
   height: auto;
@@ -243,24 +306,34 @@ ul.menu a:hover {
   margin: 0 auto;
   text-align: center;
   transition: 1s;
-  padding: 20px 0;
+  padding: 0 0 20px;
+  opacity: .95;
 }
-/* line 196, ../sass/global.scss */
+/* line 258, ../sass/global.scss */
+.pakalpojumi .content_middle .pakalpojumi_head {
+  background: #2A67B2;
+  padding: 20px;
+  margin-bottom: 20px;
+}
+/* line 264, ../sass/global.scss */
 .pakalpojumi .content_middle h2 {
-  width: 40%;
+  width: 60%;
   font-size: 1em;
-  margin: 0 auto 50px;
+  margin: 0 auto 20px;
 }
-/* line 202, ../sass/global.scss */
+/* line 270, ../sass/global.scss */
 .pakalpojumi .content_middle .pakalpojumi_cell {
+  background: #1c4578;
   width: 200px;
   height: 200px;
   margin: 20px;
   transition: .4s;
   position: relative;
   display: inline-block;
+  border-radius: 100%;
+  z-index: 2;
 }
-/* line 212, ../sass/global.scss */
+/* line 282, ../sass/global.scss */
 .pakalpojumi .content_middle .pakalpojumi_cell p {
   width: 100%;
   padding: 0 10px;
@@ -270,16 +343,8 @@ ul.menu a:hover {
   position: absolute;
   z-index: 5;
 }
-/* line 222, ../sass/global.scss */
-.pakalpojumi .content_middle .pakalpojumi_cell .pakalpojumi_img {
-  width: 100%;
-  height: 100%;
-  position: absolute;
-  overflow: hidden;
-}
-/* line 229, ../sass/global.scss */
-.pakalpojumi .content_middle .pakalpojumi_cell .pakalpojumi_img video,
-.pakalpojumi .content_middle .pakalpojumi_cell .pakalpojumi_img img {
+/* line 292, ../sass/global.scss */
+.pakalpojumi .content_middle .pakalpojumi_cell video {
   width: 100%;
   height: 100%;
   position: absolute;
@@ -287,17 +352,67 @@ ul.menu a:hover {
   left: 0;
   border-radius: 100%;
   border: 3px solid #f7f7f7;
-}
-/* line 240, ../sass/global.scss */
-.pakalpojumi .content_middle .pakalpojumi_cell .pakalpojumi_img video {
-  z-index: 2;
-}
-/* line 244, ../sass/global.scss */
-.pakalpojumi .content_middle .pakalpojumi_cell .pakalpojumi_img img {
-  z-index: 1;
+  z-index: 4;
+  background: #1c4578;
 }
 
-/* line 259, ../sass/global.scss */
+/* line 311, ../sass/global.scss */
+.partneri {
+  background: url("../img/sample_partners.jpg") no-repeat;
+  background-size: cover;
+  text-align: center;
+}
+/* line 316, ../sass/global.scss */
+.partneri .partner_block {
+  background: white;
+  width: 100%;
+  height: auto;
+  position: absolute;
+  bottom: 10%;
+  left: 0;
+  right: 0;
+  margin: 0 auto;
+  text-align: center;
+  transition: 1s;
+  padding-bottom: 20px;
+  opacity: .95;
+  overflow: hidden;
+}
+/* line 331, ../sass/global.scss */
+.partneri .partner_block .partner_head {
+  background: #2A67B2;
+  padding: 20px;
+  margin-bottom: 20px;
+}
+/* line 337, ../sass/global.scss */
+.partneri .partner_block h2 {
+  width: 60%;
+  font-size: 1em;
+  margin: 0 auto 20px;
+}
+/* line 343, ../sass/global.scss */
+.partneri .partner_block .parner_img {
+  width: 180px;
+  height: auto;
+  margin: 20px;
+  display: inline-block;
+  transition: .4s;
+}
+/* line 350, ../sass/global.scss */
+.partneri .partner_block .parner_img img {
+  max-width: 100%;
+  max-height: 100%;
+  -webkit-filter: grayscale(0.5) opacity(0.5);
+  filter: grayscale(0.5) opacity(0.5);
+  transition: .4s;
+}
+/* line 357, ../sass/global.scss */
+.partneri .partner_block .parner_img img:hover {
+  -webkit-filter: grayscale(0) opacity(1);
+  filter: grayscale(0) opacity(1);
+}
+
+/* line 372, ../sass/global.scss */
 .kontakti .footer_overlay {
   background: rgba(42, 103, 178, 0.9);
   position: absolute;
@@ -310,28 +425,28 @@ ul.menu a:hover {
   padding: 80px 0 0 30px;
   transition: .6s;
 }
-/* line 271, ../sass/global.scss */
+/* line 384, ../sass/global.scss */
 .kontakti .footer_overlay h2 {
   font-size: 1.25em;
   color: #f7f7f7;
   text-align: left;
 }
-/* line 276, ../sass/global.scss */
+/* line 389, ../sass/global.scss */
 .kontakti .footer_overlay h2:first-of-type {
   margin-top: 50px;
 }
-/* line 280, ../sass/global.scss */
+/* line 393, ../sass/global.scss */
 .kontakti .footer_overlay h2 span {
   font-size: .75em;
   color: #aad4ef;
   display: inline-block;
   width: 100px;
 }
-/* line 288, ../sass/global.scss */
+/* line 401, ../sass/global.scss */
 .kontakti .footer_overlay div.fb {
   margin: 150px auto 0;
 }
-/* line 292, ../sass/global.scss */
+/* line 405, ../sass/global.scss */
 .kontakti .footer_overlay footer {
   position: absolute;
   width: 100%;
@@ -339,16 +454,16 @@ ul.menu a:hover {
   left: 0;
   background: #2A67B2;
 }
-/* line 299, ../sass/global.scss */
+/* line 412, ../sass/global.scss */
 .kontakti .footer_overlay footer p {
   text-align: center;
   margin: 5px 0;
 }
-/* line 306, ../sass/global.scss */
+/* line 419, ../sass/global.scss */
 .kontakti .footer_map {
   width: 100%;
 }
-/* line 309, ../sass/global.scss */
+/* line 422, ../sass/global.scss */
 .kontakti .footer_map #google_map {
   width: 100%;
   height: 100vh;
