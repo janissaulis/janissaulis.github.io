@@ -11,7 +11,7 @@ function initialize() {
         mapTypeControl: false,
         scaleControl: false,
         scrollwheel: false,
-        draggable: true,
+        draggable: false,
         panControl: true,
         zoomControl: true,
         styles: [{"featureType":"all","stylers":[{"saturation":-50},{"hue":"#16355d"}]},{"featureType":"road","stylers":[{"saturation":0}]},{"featureType":"transit","stylers":[{"visibility":"off"}]},{"featureType":"poi","stylers":[{"visibility":"off"}]},{"featureType":"water","stylers":[{"visibility":"simplified"},{"saturation":-40}]}]

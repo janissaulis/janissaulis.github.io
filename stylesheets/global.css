@@ -23,50 +23,57 @@ p {
   height: 100vh !important;
 }
 
-/* line 36, ../sass/_imports.scss */
+@media screen and (max-width: 850px), screen and (max-height: 790px) {
+  /* line 37, ../sass/_imports.scss */
+  .section {
+    height: auto !important;
+  }
+}
+/* line 42, ../sass/_imports.scss */
+.fp-tableCell {
+  height: auto !important;
+  padding: 0;
+}
+
+/* line 47, ../sass/_imports.scss */
 .footer_overlay_hidden {
   opacity: 0;
   transform: translateX(400px);
 }
 
-/* line 41, ../sass/_imports.scss */
+/* line 52, ../sass/_imports.scss */
 .footer_overlay_visible {
   opacity: 1;
   transform: translateX(0px);
 }
 
-/* line 46, ../sass/_imports.scss */
+/* line 57, ../sass/_imports.scss */
 .btcf:after {
   content: "";
   display: table;
   clear: both;
 }
 
-/* line 52, ../sass/_imports.scss */
+/* line 63, ../sass/_imports.scss */
 .opacity_0 {
   opacity: 0;
   transform: translateY(100px);
 }
 
-/* line 57, ../sass/_imports.scss */
+/* line 68, ../sass/_imports.scss */
 .opacity_1 {
   opacity: 1;
   transform: translateX(0);
 }
 
-/* line 62, ../sass/_imports.scss */
+/* line 73, ../sass/_imports.scss */
 .add_bg {
   background: rgba(42, 103, 178, 0.9);
 }
 
-/* line 66, ../sass/_imports.scss */
+/* line 77, ../sass/_imports.scss */
 .add_bg_w {
-  background: white;
-}
-
-/* line 70, ../sass/_imports.scss */
-.fp-tableCell {
-  padding: 0;
+  background: rgba(255, 255, 255, 0.9);
 }
 
 /* line 8, ../sass/global.scss */
@@ -174,15 +181,32 @@ button.hamburger span {
   background: #2A67B2;
 }
 
-/* line 117, ../sass/global.scss */
+@media screen and (max-width: 900px) {
+  /* line 115, ../sass/global.scss */
+  .menu {
+    width: 100%;
+    overflow: hidden;
+  }
+  /* line 119, ../sass/global.scss */
+  .menu ul {
+    padding: 0;
+    margin: 20px 0 0;
+  }
+  /* line 124, ../sass/global.scss */
+  .menu ul.lang {
+    bottom: 5%;
+  }
+}
+/* line 133, ../sass/global.scss */
 .intro {
-  height: 100vh;
   width: 100vw;
   overflow: hidden;
+  background: url("../img/sample_intro_still.jpg");
+  background-size: cover;
 }
-/* line 122, ../sass/global.scss */
+/* line 139, ../sass/global.scss */
 .intro .logo {
-  position: fixed;
+  position: absolute;
   top: 10px;
   left: 10px;
   width: 160px;
@@ -190,14 +214,14 @@ button.hamburger span {
   z-index: 10;
   transition: .4s;
 }
-/* line 131, ../sass/global.scss */
+/* line 148, ../sass/global.scss */
 .intro .logo img {
   max-width: 100%;
   max-height: 100%;
 }
-/* line 137, ../sass/global.scss */
+/* line 154, ../sass/global.scss */
 .intro .cta {
-  position: fixed;
+  position: absolute;
   bottom: 35%;
   left: 0;
   right: 0;
@@ -206,24 +230,33 @@ button.hamburger span {
   z-index: 3;
   width: 60%;
 }
-/* line 148, ../sass/global.scss */
+/* line 165, ../sass/global.scss */
 .intro .cta h1 {
   color: #f7f7f7;
+  font-size: 4em;
+  margin: 0 auto;
+  display: block;
+  transition: .4s;
 }
-/* line 152, ../sass/global.scss */
+/* line 173, ../sass/global.scss */
 .intro .cta a {
-  font-size: 2.25em;
-  color: #aad4ef;
+  font-size: 3em;
+  color: #f7f7f7;
+  padding-top: 20px;
+  border-top: 1px solid #aad4ef;
+  margin: 20px auto 0;
+  display: block;
+  width: 500px;
 }
-/* line 158, ../sass/global.scss */
+/* line 185, ../sass/global.scss */
 .intro .ff_video {
   width: 100%;
   height: 100vh;
   overflow: hidden;
 }
-/* line 164, ../sass/global.scss */
+/* line 191, ../sass/global.scss */
 .intro .ff_video .overlay {
-  position: fixed;
+  position: absolute;
   width: 100%;
   height: 100%;
   background: url("../img/dashed_pattern_50.png");
@@ -231,7 +264,7 @@ button.hamburger span {
   left: 0;
   z-index: 2;
 }
-/* line 174, ../sass/global.scss */
+/* line 201, ../sass/global.scss */
 .intro .ff_video video {
   min-width: 100vw;
   min-height: 100vh;
@@ -242,25 +275,66 @@ button.hamburger span {
   padding: 0;
 }
 
-/* line 190, ../sass/global.scss */
+@media screen and (max-width: 1050px), screen and (max-height: 790px) {
+  /* line 216, ../sass/global.scss */
+  .intro .logo {
+    width: 120px;
+    bottom: 25%;
+  }
+  /* line 221, ../sass/global.scss */
+  .intro .cta {
+    width: 80%;
+  }
+  /* line 224, ../sass/global.scss */
+  .intro .cta h1 {
+    font-size: 3em;
+  }
+  /* line 228, ../sass/global.scss */
+  .intro .cta a {
+    font-size: 2.5em;
+    width: 60%;
+  }
+  /* line 236, ../sass/global.scss */
+  .intro .ff_video video {
+    display: none;
+  }
+}
+@media screen and (max-width: 600px) {
+  /* line 246, ../sass/global.scss */
+  .intro .cta {
+    width: 80%;
+    bottom: 20%;
+  }
+  /* line 250, ../sass/global.scss */
+  .intro .cta h1 {
+    font-size: 2.5em;
+  }
+  /* line 254, ../sass/global.scss */
+  .intro .cta a {
+    font-size: 2.5em;
+    width: 80%;
+  }
+}
+/* line 265, ../sass/global.scss */
 .svarigi {
   padding: 0;
   background: url("../img/sample_roof.jpg") no-repeat;
   background-size: cover;
 }
-/* line 195, ../sass/global.scss */
+/* line 270, ../sass/global.scss */
 .svarigi .fade_in {
   opacity: 1;
   transform: translateX(0px);
 }
-/* line 200, ../sass/global.scss */
+/* line 275, ../sass/global.scss */
 .svarigi .content_left {
   width: 28%;
   height: 100vh;
-  padding: 10% 50px 0;
+  padding: 10% 50px 50px;
   background: rgba(42, 103, 178, 0.9);
+  transition: .4s;
 }
-/* line 207, ../sass/global.scss */
+/* line 283, ../sass/global.scss */
 .svarigi p {
   text-align: justify;
   color: #f7f7f7;
@@ -270,7 +344,7 @@ button.hamburger span {
   transition: .4s;
   transform: translateX(-50px);
 }
-/* line 216, ../sass/global.scss */
+/* line 292, ../sass/global.scss */
 .svarigi p::before {
   content: "";
   display: inline-block;
@@ -282,20 +356,66 @@ button.hamburger span {
   border-top-right-radius: 10px;
   border-bottom-left-radius: 10px;
 }
-/* line 229, ../sass/global.scss */
+/* line 305, ../sass/global.scss */
 .svarigi h1 {
   color: white;
   margin: 0 0 50px;
 }
 
-/* line 239, ../sass/global.scss */
+@media screen and (max-width: 1280px), screen and (max-height: 790px) {
+  /* line 314, ../sass/global.scss */
+  .svarigi .content_left {
+    width: 40%;
+    padding: 10% 50px 0;
+  }
+  /* line 319, ../sass/global.scss */
+  .svarigi h1 {
+    color: white;
+    margin: 0 0 50px;
+  }
+}
+@media screen and (max-width: 1024px), screen and (max-height: 790px) {
+  /* line 329, ../sass/global.scss */
+  .svarigi .content_left {
+    width: 100%;
+    padding: 20% 50px 50px;
+  }
+  /* line 334, ../sass/global.scss */
+  .svarigi h1 {
+    color: white;
+    margin: 0 0 50px;
+  }
+}
+@media screen and (max-width: 500px) {
+  /* line 342, ../sass/global.scss */
+  .svarigi {
+    height: auto;
+  }
+  /* line 345, ../sass/global.scss */
+  .svarigi .content_left {
+    width: 100%;
+    height: auto;
+    min-height: 100vh;
+    padding: 20% 70px 50px 20px;
+  }
+  /* line 351, ../sass/global.scss */
+  .svarigi .content_left p {
+    font-size: .9em;
+  }
+  /* line 356, ../sass/global.scss */
+  .svarigi h1 {
+    color: white;
+    margin: 0 0 50px;
+    font-size: 2em;
+  }
+}
+/* line 367, ../sass/global.scss */
 .pakalpojumi {
   padding: 0;
   background: url("../img/sample_pakalpojumi.jpg");
   background-size: cover;
-  position: relative;
 }
-/* line 245, ../sass/global.scss */
+/* line 372, ../sass/global.scss */
 .pakalpojumi .content_middle {
   width: 100%;
   height: auto;
@@ -307,21 +427,20 @@ button.hamburger span {
   text-align: center;
   transition: 1s;
   padding: 0 0 20px;
-  opacity: .95;
 }
-/* line 258, ../sass/global.scss */
+/* line 384, ../sass/global.scss */
 .pakalpojumi .content_middle .pakalpojumi_head {
   background: #2A67B2;
   padding: 20px;
   margin-bottom: 20px;
 }
-/* line 264, ../sass/global.scss */
+/* line 390, ../sass/global.scss */
 .pakalpojumi .content_middle h2 {
   width: 60%;
   font-size: 1em;
   margin: 0 auto 20px;
 }
-/* line 270, ../sass/global.scss */
+/* line 396, ../sass/global.scss */
 .pakalpojumi .content_middle .pakalpojumi_cell {
   background: #1c4578;
   width: 200px;
@@ -333,7 +452,7 @@ button.hamburger span {
   border-radius: 100%;
   z-index: 2;
 }
-/* line 282, ../sass/global.scss */
+/* line 408, ../sass/global.scss */
 .pakalpojumi .content_middle .pakalpojumi_cell p {
   width: 100%;
   padding: 0 10px;
@@ -343,7 +462,7 @@ button.hamburger span {
   position: absolute;
   z-index: 5;
 }
-/* line 292, ../sass/global.scss */
+/* line 418, ../sass/global.scss */
 .pakalpojumi .content_middle .pakalpojumi_cell video {
   width: 100%;
   height: 100%;
@@ -356,13 +475,54 @@ button.hamburger span {
   background: #1c4578;
 }
 
-/* line 311, ../sass/global.scss */
+@media screen and (max-width: 1024px), screen and (max-height: 790px) {
+  /* line 437, ../sass/global.scss */
+  .pakalpojumi .fp-tableCell {
+    vertical-align: top;
+  }
+  /* line 441, ../sass/global.scss */
+  .pakalpojumi .content_middle {
+    position: static;
+    background: none;
+  }
+  /* line 445, ../sass/global.scss */
+  .pakalpojumi .content_middle .pakalpojumi_head {
+    padding: 20px 70px 20px 20px;
+    margin-bottom: 20px;
+    text-align: left;
+    background: rgba(247, 247, 247, 0.8);
+  }
+  /* line 452, ../sass/global.scss */
+  .pakalpojumi .content_middle h1 {
+    font-size: 2em;
+    color: #16355d;
+  }
+  /* line 457, ../sass/global.scss */
+  .pakalpojumi .content_middle h2 {
+    width: auto;
+    font-size: 1em;
+    margin: 0 0 20px;
+    text-align: justify;
+    line-height: 1.5em;
+    color: #1c4578;
+  }
+  /* line 466, ../sass/global.scss */
+  .pakalpojumi .content_middle .pakalpojumi_cell {
+    margin: 20px;
+    background: rgba(28, 69, 120, 0.9);
+  }
+  /* line 470, ../sass/global.scss */
+  .pakalpojumi .content_middle .pakalpojumi_cell video {
+    display: none;
+  }
+}
+/* line 481, ../sass/global.scss */
 .partneri {
   background: url("../img/sample_partners.jpg") no-repeat;
   background-size: cover;
   text-align: center;
 }
-/* line 316, ../sass/global.scss */
+/* line 486, ../sass/global.scss */
 .partneri .partner_block {
   background: white;
   width: 100%;
@@ -375,22 +535,21 @@ button.hamburger span {
   text-align: center;
   transition: 1s;
   padding-bottom: 20px;
-  opacity: .95;
   overflow: hidden;
 }
-/* line 331, ../sass/global.scss */
+/* line 500, ../sass/global.scss */
 .partneri .partner_block .partner_head {
   background: #2A67B2;
   padding: 20px;
   margin-bottom: 20px;
 }
-/* line 337, ../sass/global.scss */
+/* line 506, ../sass/global.scss */
 .partneri .partner_block h2 {
   width: 60%;
   font-size: 1em;
   margin: 0 auto 20px;
 }
-/* line 343, ../sass/global.scss */
+/* line 512, ../sass/global.scss */
 .partneri .partner_block .parner_img {
   width: 180px;
   height: auto;
@@ -398,7 +557,7 @@ button.hamburger span {
   display: inline-block;
   transition: .4s;
 }
-/* line 350, ../sass/global.scss */
+/* line 519, ../sass/global.scss */
 .partneri .partner_block .parner_img img {
   max-width: 100%;
   max-height: 100%;
@@ -406,13 +565,59 @@ button.hamburger span {
   filter: grayscale(0.5) opacity(0.5);
   transition: .4s;
 }
-/* line 357, ../sass/global.scss */
+/* line 526, ../sass/global.scss */
 .partneri .partner_block .parner_img img:hover {
   -webkit-filter: grayscale(0) opacity(1);
   filter: grayscale(0) opacity(1);
 }
 
-/* line 372, ../sass/global.scss */
+@media screen and (max-width: 1024px), screen and (max-height: 790px) {
+  /* line 538, ../sass/global.scss */
+  .partneri .fp-tableCell {
+    vertical-align: top;
+  }
+  /* line 542, ../sass/global.scss */
+  .partneri .partner_block {
+    position: static;
+    text-align: center;
+    padding-bottom: 20px;
+    overflow: hidden;
+    margin-top: 0;
+  }
+  /* line 549, ../sass/global.scss */
+  .partneri .partner_block .partner_head {
+    padding: 20px 70px 20px 20px;
+    margin-bottom: 20px;
+  }
+  /* line 554, ../sass/global.scss */
+  .partneri .partner_block h1 {
+    font-size: 2em;
+    text-align: left;
+  }
+  /* line 559, ../sass/global.scss */
+  .partneri .partner_block h2 {
+    width: auto;
+    font-size: 1em;
+    line-height: 1.5em;
+    margin: 0 0 20px;
+    text-align: justify;
+  }
+  /* line 567, ../sass/global.scss */
+  .partneri .partner_block .parner_img {
+    width: 180px;
+    height: auto;
+    margin: 20px;
+    display: inline-block;
+    transition: .4s;
+  }
+  /* line 574, ../sass/global.scss */
+  .partneri .partner_block .parner_img img {
+    -webkit-filter: grayscale(0) opacity(1);
+    filter: grayscale(0) opacity(1);
+    transition: .4s;
+  }
+}
+/* line 590, ../sass/global.scss */
 .kontakti .footer_overlay {
   background: rgba(42, 103, 178, 0.9);
   position: absolute;
@@ -425,28 +630,28 @@ button.hamburger span {
   padding: 80px 0 0 30px;
   transition: .6s;
 }
-/* line 384, ../sass/global.scss */
+/* line 602, ../sass/global.scss */
 .kontakti .footer_overlay h2 {
   font-size: 1.25em;
   color: #f7f7f7;
   text-align: left;
 }
-/* line 389, ../sass/global.scss */
+/* line 607, ../sass/global.scss */
 .kontakti .footer_overlay h2:first-of-type {
   margin-top: 50px;
 }
-/* line 393, ../sass/global.scss */
+/* line 611, ../sass/global.scss */
 .kontakti .footer_overlay h2 span {
   font-size: .75em;
   color: #aad4ef;
   display: inline-block;
   width: 100px;
 }
-/* line 401, ../sass/global.scss */
+/* line 619, ../sass/global.scss */
 .kontakti .footer_overlay div.fb {
   margin: 150px auto 0;
 }
-/* line 405, ../sass/global.scss */
+/* line 623, ../sass/global.scss */
 .kontakti .footer_overlay footer {
   position: absolute;
   width: 100%;
@@ -454,17 +659,89 @@ button.hamburger span {
   left: 0;
   background: #2A67B2;
 }
-/* line 412, ../sass/global.scss */
+/* line 630, ../sass/global.scss */
 .kontakti .footer_overlay footer p {
   text-align: center;
   margin: 5px 0;
 }
-/* line 419, ../sass/global.scss */
+/* line 637, ../sass/global.scss */
 .kontakti .footer_map {
   width: 100%;
 }
-/* line 422, ../sass/global.scss */
+/* line 640, ../sass/global.scss */
 .kontakti .footer_map #google_map {
   width: 100%;
   height: 100vh;
+}
+
+@media screen and (max-width: 1024px), screen and (max-height: 790px) {
+  /* line 648, ../sass/global.scss */
+  .kontakti {
+    height: 800px !important;
+    width: 100%;
+    overflow: hidden;
+  }
+  /* line 653, ../sass/global.scss */
+  .kontakti .footer_overlay {
+    background: #2a67b2;
+    position: absolute;
+    text-align: left;
+    bottom: 0;
+    top: 500px;
+    width: 100%;
+    height: 300px;
+    padding: 10px 0 0 5%;
+  }
+  /* line 663, ../sass/global.scss */
+  .kontakti .footer_overlay h1 {
+    font-size: 2em;
+  }
+  /* line 667, ../sass/global.scss */
+  .kontakti .footer_overlay h2 {
+    font-size: 1em;
+    color: #f7f7f7;
+    text-align: left;
+  }
+  /* line 672, ../sass/global.scss */
+  .kontakti .footer_overlay h2:first-of-type {
+    margin-top: 50px;
+  }
+  /* line 676, ../sass/global.scss */
+  .kontakti .footer_overlay h2 span {
+    font-size: .75em;
+    color: #aad4ef;
+    display: inline-block;
+    width: 100px;
+  }
+  /* line 684, ../sass/global.scss */
+  .kontakti .footer_overlay div.fb {
+    display: none;
+  }
+  /* line 688, ../sass/global.scss */
+  .kontakti .footer_overlay footer {
+    position: absolute;
+    width: 100%;
+    bottom: 0;
+    left: 0;
+    background: #1c4578;
+    margin: 0;
+  }
+  /* line 696, ../sass/global.scss */
+  .kontakti .footer_overlay footer p {
+    text-align: center;
+    margin: 5px 0;
+  }
+  /* line 703, ../sass/global.scss */
+  .kontakti .footer_map {
+    width: 100%;
+    margin: 0;
+    position: absolute;
+    top: 0;
+  }
+  /* line 709, ../sass/global.scss */
+  .kontakti .footer_map #google_map {
+    width: 100%;
+    height: 500px;
+    margin: 0;
+  }
 }

@@ -33,6 +33,17 @@ p {
   height: 100vh !important;
 }
 
+@media screen and (max-width: 850px), screen and (max-height: 790px){
+  .section {
+    height: auto !important;
+  }
+}
+
+.fp-tableCell {
+  height: auto !important;
+  padding: 0;
+}
+
 .footer_overlay_hidden {
   opacity: 0;
   transform: translateX(400px);
@@ -64,9 +75,5 @@ p {
 }
 
 .add_bg_w {
-  background: white;
-}
-
-.fp-tableCell {
-  padding: 0;
+  background: rgba(white, .9);
 }
