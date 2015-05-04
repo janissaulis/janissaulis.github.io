@@ -33,7 +33,7 @@ p {
   height: 100vh !important;
 }
 
-@media screen and (max-width: 850px), screen and (max-height: 790px){
+@media screen and (max-width: 1050px), screen and (max-height: 790px){
   .section {
     height: auto !important;
   }
@@ -47,6 +47,13 @@ p {
 .footer_overlay_hidden {
   opacity: 0;
   transform: translateX(400px);
+}
+
+@media screen and (max-width: 1050px), screen and (max-height: 790px){
+  .footer_overlay_hidden {
+    opacity: 1;
+    transform: translateX(0);
+  }
 }
 
 .footer_overlay_visible {
@@ -65,9 +72,13 @@ p {
   transform: translateY(100px);
 }
 
+.scale {
+  transform: scale(2);
+}
+
 .opacity_1 {
   opacity: 1;
-  transform: translateX(0);
+  transform: translateY(0);
 }
 
 .add_bg {

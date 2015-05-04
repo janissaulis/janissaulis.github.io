@@ -49,8 +49,11 @@
         <div class="intro section" data-anchor="firstPage">
 
             <div class="logo"><img src="img/suntechlv_logo2v.svg" alt="logo"/></div>
+            <div class="like">
+                <div class="fb-like" data-href="https://www.facebook.com/suntech.lv?fref=ts" data-layout="button" data-action="like" data-show-faces="true" data-share="false"></div>
+            </div>
 
-            <div class="cta">
+            <div class="cta opacity_0 scale">
                 <h1>JUMTU DIAGNOSTIKA UN REMONTS</h1>
                 <a href="tel:+37129363547">29363547</a>
             </div>
@@ -94,37 +97,22 @@
 
                 <div class="pakalpojumi_cell opacity_0">
                     <p>Jumta tehniskā stāvokļa novērtēšana</p>
-                    <video class="vthumb" preload="auto" autoplay loop muted preload="auto">
-                        <source src="img/video_thumbs/sample_128.mp4" type="video/mp4">
-                    </video>
                 </div>
 
                 <div class="pakalpojumi_cell opacity_0">
                     <p>Projektu tehnisko mezglu izstrāde</p>
-                    <video class="vthumb" preload="auto" autoplay loop muted preload="auto">
-                        <source src="img/video_thumbs/sample_128.mp4" type="video/mp4">
-                    </video>
                 </div>
 
                 <div class="pakalpojumi_cell opacity_0">
                     <p>Jumtu darbu uzraudzība</p>
-                    <video class="vthumb" preload="auto" autoplay loop muted preload="auto">
-                        <source src="img/video_thumbs/sample_128.mp4" type="video/mp4">
-                    </video>
                 </div>
 
                 <div class="pakalpojumi_cell opacity_0">
                     <p>Eksperta szlēdziena sagatavošana</p>
-                    <video class="vthumb" preload="auto" autoplay loop muted preload="auto">
-                        <source src="img/video_thumbs/sample_128.mp4" type="video/mp4">
-                    </video>
                 </div>
 
                 <div class="pakalpojumi_cell opacity_0">
                     <p>Hidroizolācijas bojājumu noteikšana</p>
-                    <video class="vthumb" preload="auto" autoplay loop muted preload="auto">
-                        <source src="img/video_thumbs/sample_128.mp4" type="video/mp4">
-                    </video>
                 </div>
             </div>
         </div>
@@ -190,6 +178,7 @@
                 menu: '#menu',
                 scrollingSpeed: 1000,
                 responsive: 1050,
+                keyboardScrolling: false,
 
                 //Fade in content for sections ---------------------------------------------------------
 
@@ -233,6 +222,8 @@
                     }
 
                     $(".right p").addClass("fade_in");
+
+                    $(".cta").removeClass("opacity_0 scale");
                 },
 
                 'afterLoad': function (anchorLink, index) {
