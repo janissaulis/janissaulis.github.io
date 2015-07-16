@@ -659,9 +659,12 @@ button.hamburger span {
 }
 /* line 617, ../sass/global.scss */
 .kontakti .footer_overlay div.fb {
-  margin: 150px auto 0;
+  margin: 150px 0 0;
+  background: #f7f7f7;
+  width: 350px;
+  padding: 5px;
 }
-/* line 621, ../sass/global.scss */
+/* line 624, ../sass/global.scss */
 .kontakti .footer_overlay footer {
   position: absolute;
   width: 100%;
@@ -669,29 +672,29 @@ button.hamburger span {
   left: 0;
   background: #2A67B2;
 }
-/* line 628, ../sass/global.scss */
+/* line 631, ../sass/global.scss */
 .kontakti .footer_overlay footer p {
   text-align: center;
   margin: 5px 0;
 }
-/* line 635, ../sass/global.scss */
+/* line 638, ../sass/global.scss */
 .kontakti .footer_map {
   width: 100%;
 }
-/* line 638, ../sass/global.scss */
+/* line 641, ../sass/global.scss */
 .kontakti .footer_map #google_map {
   width: 100%;
   height: 100vh;
 }
 
 @media screen and (max-width: 1050px), screen and (max-height: 790px) {
-  /* line 646, ../sass/global.scss */
+  /* line 649, ../sass/global.scss */
   .kontakti {
     height: 800px !important;
     width: 100%;
     overflow: hidden;
   }
-  /* line 651, ../sass/global.scss */
+  /* line 654, ../sass/global.scss */
   .kontakti .footer_overlay {
     background: #2a67b2;
     position: absolute;
@@ -702,32 +705,32 @@ button.hamburger span {
     height: 300px;
     padding: 10px 0 0 5%;
   }
-  /* line 661, ../sass/global.scss */
+  /* line 664, ../sass/global.scss */
   .kontakti .footer_overlay h1 {
     font-size: 2em;
   }
-  /* line 665, ../sass/global.scss */
+  /* line 668, ../sass/global.scss */
   .kontakti .footer_overlay h2 {
     font-size: 1em;
     color: #f7f7f7;
     text-align: left;
   }
-  /* line 670, ../sass/global.scss */
+  /* line 673, ../sass/global.scss */
   .kontakti .footer_overlay h2:first-of-type {
     margin-top: 50px;
   }
-  /* line 674, ../sass/global.scss */
+  /* line 677, ../sass/global.scss */
   .kontakti .footer_overlay h2 span {
     font-size: .75em;
     color: #aad4ef;
     display: inline-block;
     width: 100px;
   }
-  /* line 682, ../sass/global.scss */
+  /* line 685, ../sass/global.scss */
   .kontakti .footer_overlay div.fb {
     display: none;
   }
-  /* line 686, ../sass/global.scss */
+  /* line 689, ../sass/global.scss */
   .kontakti .footer_overlay footer {
     position: absolute;
     width: 100%;
@@ -736,19 +739,19 @@ button.hamburger span {
     background: #1c4578;
     margin: 0;
   }
-  /* line 694, ../sass/global.scss */
+  /* line 697, ../sass/global.scss */
   .kontakti .footer_overlay footer p {
     text-align: center;
     margin: 5px 0;
   }
-  /* line 701, ../sass/global.scss */
+  /* line 704, ../sass/global.scss */
   .kontakti .footer_map {
     width: 100%;
     margin: 0;
     position: absolute;
     top: 0;
   }
-  /* line 707, ../sass/global.scss */
+  /* line 710, ../sass/global.scss */
   .kontakti .footer_map #google_map {
     width: 100%;
     height: 500px;

@@ -615,7 +615,10 @@ button.hamburger {
     }
 
     div.fb {
-      margin: 150px auto 0;
+      margin: 150px 0 0;
+      background: $color_light;
+      width: 350px;
+      padding: 5px;
     }
 
     footer {

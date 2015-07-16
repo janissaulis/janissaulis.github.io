@@ -19,7 +19,7 @@
         var js, fjs = d.getElementsByTagName(s)[0];
         if (d.getElementById(id)) return;
         js = d.createElement(s); js.id = id;
-        js.src = "//connect.facebook.net/en_US/sdk.js#xfbml=1&version=v2.3";
+        js.src = "//connect.facebook.net/en_US/sdk.js#xfbml=1&version=v2.4";
         fjs.parentNode.insertBefore(js, fjs);
     }(document, 'script', 'facebook-jssdk'));</script>
 
@@ -31,17 +31,17 @@
         <ul>
             <li id="close"><button>&times;</button></li>
             <li data-menuanchor="firstPage"><a href="#firstPage">Sākums</a></li>
-            <li data-menuanchor="secondPage"><a href="#secondPage">Kapēc svarīgi?</a></li>
+            <li data-menuanchor="secondPage"><a href="#secondPage">Par mums</a></li>
             <li data-menuanchor="3rdPage"><a href="#3rdPage">Pakalpojumi</a></li>
             <li data-menuanchor="4thPage"><a href="#4thPage">Sadarbības partneri</a></li>
             <li data-menuanchor="lastPage"><a href="#lastPage">Kontakti</a></li>
         </ul>
 
-        <ul class="lang">
+        <!--<ul class="lang">
             <li><a class="active" href="#">LV</a></li>
             <li><a href="#">RU</a></li>
             <li><a href="#">EN</a></li>
-        </ul>
+        </ul>-->
     </div>
 
     <div id="fullpage">
@@ -70,16 +70,20 @@
         <div class="svarigi section" data-anchor="secondPage">
 
             <div class="content_left">
-                <h1>Kapēc svarīgi?</h1>
-                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-                    Beatae consectetur, dignissimos doloremque ea esse harum incidunt inventore ipsam labore, libero neque qui quisquam ratione recusandae sapiente similique ullam unde voluptatem!
+                <h1>Par mums</h1>
+                <p>
+                    SIA "Suntech.Lv" ir salīdzinoši jauns uzņēmums, taču tajā darbojās speciālisti ar līdz pat 20 gadu pieredzi būvniecības un, konkrēti, jumtu montāžas jomā.
+                    Daļa no komandas speciālistiem ir piedalījušies Latvijas Nacionālās bibliotēkas būvniecībā un Latvijas Nacionālā mākslas muzeja rekonstrukcijas, restaurācijas un jaunbūves būvniecībā - arī šo procesu vadībā.
                 </p>
-                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-                    Beatae consectetur, dignissimos doloremque ea esse harum incidunt inventore ipsam labore, libero neque qui quisquam ratione recusandae sapiente similique ullam unde voluptatem!
-                </p>
-                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-                    Beatae consectetur, dignissimos doloremque ea esse harum incidunt inventore ipsam labore, libero neque qui quisquam ratione recusandae sapiente similique ullam unde voluptatem!
-                </p>
+                <p>Zemāk uzskaitīti tikai daži no būvniecības objektiem, kuros piedalījušies SIA "Suntech.Lv" komandas speciālisti:
+                    Elizabetes iela 3 - Kāpņu montāža un sienu pastiprināšana;
+                    Rīgas Nacionālais zooloģiskais dārzs - Jumtu izbūve un apkope;
+                    Veikals "Prizma" (Saharova iela) - Nesošu metāla konstrukciju izgatavošana un montāža;
+                    Atkritumu šķirošaas stacijas (Madonā un Aizkrauklē) - Nesošu metāla konstrukciju izgatavošana un montāža;
+                    Veikals "Maksima" (Jēkabpils) - Nesošu metāla konstrukciju izgatavošana un montāža
+                    Zirgu sallis (Jelgava) - Jauna jumta izbūve un nesošu metāla konstrukciju izgatavošana un montāža;
+                    Bērnudārzi (Ogre) - Evakuācijas kāpņu izgatavošana un montāža. Margu izgatavošana un uzstādīšana;
+                    Skuju iela 11 - Metāla žoga un metāla stabu montāža</p>
             </div>
         </div>
 
@@ -90,13 +94,17 @@
                 <div class="pakalpojumi_head">
                     <h1>Pakalpojumi</h1>
                     <h2>
-                        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ab aspernatur consectetur ea eius eos harum itaque molestiae nam, possimus!
-                        Architecto dolor ipsum iure nesciunt numquam pariatur perferendis quaerat ratione suscipit!
+                       SIA "Suntech.Lv" piedāvā veikt plašu klāstu būvniecības un ekspertīzes pakalpojumu, kas balstīti uz sertificētu speciālistu pieredzes.
+                        Esam operatīvi un elastīgi - īsā laikā spēsim rast Jums izdevīgako risinājumu.
                     </h2>
                 </div>
 
                 <div class="pakalpojumi_cell opacity_0">
-                    <p>Jumta tehniskā stāvokļa novērtēšana</p>
+                    <p>Jumta tehniskā stāvokļa noteikšana</p>
+                </div>
+
+                <div class="pakalpojumi_cell opacity_0">
+                    <p>Jumtu būvdarbu uzraudzība</p>
                 </div>
 
                 <div class="pakalpojumi_cell opacity_0">
@@ -104,15 +112,11 @@
                 </div>
 
                 <div class="pakalpojumi_cell opacity_0">
-                    <p>Jumtu darbu uzraudzība</p>
+                    <p>Hidroizolācijas bojājumu apsekošana</p>
                 </div>
 
                 <div class="pakalpojumi_cell opacity_0">
-                    <p>Eksperta szlēdziena sagatavošana</p>
-                </div>
-
-                <div class="pakalpojumi_cell opacity_0">
-                    <p>Hidroizolācijas bojājumu noteikšana</p>
+                    <p>Sertificēta eksperta szlēdziena sagatavošana</p>
                 </div>
             </div>
         </div>
@@ -123,8 +127,7 @@
                 <div class="partner_head">
                     <h1>Sadarbības partneri</h1>
                     <h2>
-                        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ab aspernatur consectetur ea eius eos harum itaque molestiae nam, possimus!
-                        Architecto dolor ipsum iure nesciunt numquam pariatur perferendis quaerat ratione suscipit!
+                        SIA "Suntech.Lv" strādājošie speciālisti iepriekš ilgstoši un veiksmīgi sadarbojušies ar vairākām vadošām būvfirmām Latvijā. Zemāk uzskaitītas tikai dažas no tām.
                     </h2>
                 </div>
 
@@ -144,13 +147,13 @@
 
 
 
-                <h2><span>Uzņēmums: </span>SIA "Suntech.lv"</h2>
-                <h2><span>Adrese: </span>Graudu iela 33, Rīga, Latvija</h2>
+                <h2><span>Uzņēmums: </span>SIA "Suntech.Lv"</h2>
+                <h2><span>Adrese: </span>Zaļenieku iela 11, Rīga, Latvija</h2>
                 <h2><span>Tel: </span>29363547</h2>
-                <h2><span>E-pasts: </span>suntech.lv@gmail.com</h2>
+                <h2><span>E-pasts: </span>saulis.janis@gmail.com</h2>
 
                 <div class="fb">
-                    <div class="fb-page" data-href="https://www.facebook.com/suntech.lv" data-width="340px" data-hide-cover="false" data-show-facepile="true" data-show-posts="false"><div class="fb-xfbml-parse-ignore"><blockquote cite="https://www.facebook.com/suntech.lv"><a href="https://www.facebook.com/suntech.lv">Suntech.lv</a></blockquote></div></div>
+                    <div class="fb-like" data-href="https://www.facebook.com/suntech.lv?ref=bookmarks" data-width="340" data-layout="standard" data-action="like" data-show-faces="true" data-share="true"></div>
                 </div>
 
                 <footer><p>© 2015 Suntech.lv.</p></footer>

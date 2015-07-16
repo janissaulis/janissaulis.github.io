@@ -21,8 +21,8 @@ function initialize() {
         mapOptions);
 
     marker = new google.maps.Marker({
-        map:map,
-        draggable:false,
+        map: map,
+        draggable: false,
         animation: google.maps.Animation.DROP,
         position: Location
     });
