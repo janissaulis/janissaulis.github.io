@@ -33,7 +33,7 @@ p {
   height: 100vh !important;
 }
 
-@media screen and (max-width: 1050px), screen and (max-height: 790px){
+@media screen and (max-width: 1450px){
   .section {
     height: auto !important;
   }
@@ -42,23 +42,6 @@ p {
 .fp-tableCell {
   height: auto !important;
   padding: 0;
-}
-
-.footer_overlay_hidden {
-  opacity: 0;
-  transform: translateX(400px);
-}
-
-@media screen and (max-width: 1050px), screen and (max-height: 790px){
-  .footer_overlay_hidden {
-    opacity: 1;
-    transform: translateX(0);
-  }
-}
-
-.footer_overlay_visible {
-  opacity: 1;
-  transform: translateX(0px);
 }
 
 .btcf:after {

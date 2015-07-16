@@ -156,7 +156,7 @@ button.hamburger {
 
     img {
       max-width: 100%;
-      max-height: 100%;
+      width: 100%;
     }
   }
 
@@ -289,7 +289,8 @@ button.hamburger {
 
   .content_left {
     width: 28%;
-    height: 100vh;
+    height: auto;
+    min-height: 100vh;
     padding: 10% 50px 50px;
     background: rgba($color_blue, .9);
     transition: .4s;
@@ -348,27 +349,12 @@ button.hamburger {
   }
 }
 
-@media screen and (max-width: 1280px), screen and (max-height: 790px){
-  .svarigi {
-
-    .content_left {
-      width: 40%;
-      padding: 10% 50px 0;
-    }
-
-    h1 {
-      color: white;
-      margin: 0 0 50px;
-    }
-  }
-}
-
-@media screen and (max-width: 1050px), screen and (max-height: 790px){
+@media screen and (max-width: 1400px), screen and (max-height: 790px){
   .svarigi {
 
     .content_left {
       width: 100%;
-      padding: 20% 50px 50px;
+      padding: 10% 50px 50px;
     }
 
     h1 {
@@ -443,15 +429,23 @@ button.hamburger {
       display: inline-block;
       border-radius: 100%;
       border: 3px solid $color_light;
+      position: relative;
 
 
       p {
-        width: 100%;
+        width: auto;
+        height: 80px;
+        //background: red;
+        position: absolute;
         padding: 0 10px;
         font-size: 1.25em;
         text-align: center;
         z-index: 5;
-        margin: 75px 0 0;
+        top: 20px;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        margin: auto;
       }
     }
   }
@@ -541,6 +535,7 @@ button.hamburger {
 
       img {
         max-width: 100%;
+        width: 100%;
         max-height: 100%;
         -webkit-filter: grayscale(0.5) opacity(0.5);
         filter: grayscale(0.5) opacity(0.5);
@@ -620,7 +615,6 @@ button.hamburger {
     right: 0;
     z-index: 100;
     padding: 80px 0 0 30px;
-    transition: .6s;
 
     h2 {
       font-size: 1.25em;

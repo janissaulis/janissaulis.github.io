@@ -2,7 +2,7 @@
 <html>
 <head lang="en">
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <link href="stylesheets/normalize.css" rel="stylesheet">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fullPage.js/2.6.4/jquery.fullPage.min.css">
@@ -41,11 +41,11 @@
     <div class="menu display_none">
         <ul>
             <li id="close"><button>&times;</button></li>
-            <li data-menuanchor="firstPage"><a href="#firstPage">Sākums</a></li>
-            <li data-menuanchor="secondPage"><a href="#secondPage">Par mums</a></li>
-            <li data-menuanchor="3rdPage"><a href="#3rdPage">Pakalpojumi</a></li>
-            <li data-menuanchor="4thPage"><a href="#4thPage">Sadarbības partneri</a></li>
-            <li data-menuanchor="lastPage"><a href="#lastPage">Kontakti</a></li>
+            <li data-menuanchor="Home"><a href="#Home">Sākums</a></li>
+            <li data-menuanchor="About"><a href="#About">Par mums</a></li>
+            <li data-menuanchor="Services"><a href="#Services">Pakalpojumi</a></li>
+            <li data-menuanchor="Partners"><a href="#Partners">Sadarbības partneri</a></li>
+            <li data-menuanchor="Contacts"><a href="#Contacts">Kontakti</a></li>
         </ul>
 
         <!--<ul class="lang">
@@ -57,7 +57,7 @@
 
     <div id="fullpage">
 
-        <div class="intro section" data-anchor="firstPage">
+        <div class="intro section" data-anchor="Home">
 
             <div class="logo"><img src="img/suntechlv_logo2v.svg" alt="logo"/></div>
             <div class="like">
@@ -78,7 +78,7 @@
             </div>
         </div>
 
-        <div class="svarigi section" data-anchor="secondPage">
+        <div class="svarigi section" data-anchor="About">
 
             <div class="content_left">
                 <h1>Par mums</h1>
@@ -102,7 +102,7 @@
             </div>
         </div>
 
-        <div class="pakalpojumi section" data-anchor="3rdPage">
+        <div class="pakalpojumi section" data-anchor="Services">
 
             <div class="content_middle opacity_0">
 
@@ -136,7 +136,7 @@
             </div>
         </div>
 
-        <div class="partneri section" data-anchor="4thPage">
+        <div class="partneri section" data-anchor="Partners">
 
             <div class="partner_block opacity_0">
                 <div class="partner_head">
@@ -153,9 +153,9 @@
             </div>
         </div>
 
-        <div class="kontakti section" data-anchor="lastPage">
+        <div class="kontakti section" data-anchor="Contacts">
 
-            <div class="footer_overlay footer_overlay_hidden">
+            <div class="footer_overlay">
 
                 <h1>Kontakti</h1>
 
@@ -194,7 +194,7 @@
                 anchors: ['Home', 'About', 'Services', 'Partners', 'Contacts'],
                 menu: '#menu',
                 scrollingSpeed: 1000,
-                responsive: 1050,
+                responsive: 1600,
                 keyboardScrolling: false,
 
                 //Fade in content for sections ---------------------------------------------------------
@@ -227,8 +227,6 @@
                         });
                         $(".partner_block").removeClass("opacity_0").addClass("opacity_1 add_bg_w");
                         //going from section 4 to 5
-                    } else if (index == 4 && direction == 'down') {
-                        $(".footer_overlay").removeClass("footer_overlay_hidden").addClass("footer_overlay_visible");
                     }
                 },
 
@@ -244,12 +242,8 @@
                 },
 
                 'afterLoad': function (anchorLink, index) {
-                 //for section 5
-                     if (index == 5) {
-
-                         $(".footer_overlay").removeClass("footer_overlay_hidden").addClass("footer_overlay_visible");
                  //for section 3
-                     } else if (index == 3) {
+                     if (index == 3) {
                          $(".pakalpojumi_cell").each(function(i){
 
                              setTimeout(function() {
