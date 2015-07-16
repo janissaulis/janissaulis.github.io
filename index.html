@@ -12,6 +12,17 @@
     <title>Suntech-lv</title>
 </head>
 <body>
+    <!--Google Analytics-->
+    <script>
+    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+        (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+            m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+    })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+    ga('create', 'UA-65231520-1', 'auto');
+    ga('send', 'pageview');
+
+    </script>
 
     <!--Facebook SDK-->
     <div id="fb-root"></div>
@@ -75,15 +86,19 @@
                     SIA "Suntech.Lv" ir salīdzinoši jauns uzņēmums, taču tajā darbojās speciālisti ar līdz pat 20 gadu pieredzi būvniecības un, konkrēti, jumtu montāžas jomā.
                     Daļa no komandas speciālistiem ir piedalījušies Latvijas Nacionālās bibliotēkas būvniecībā un Latvijas Nacionālā mākslas muzeja rekonstrukcijas, restaurācijas un jaunbūves būvniecībā - arī šo procesu vadībā.
                 </p>
-                <p>Zemāk uzskaitīti tikai daži no būvniecības objektiem, kuros piedalījušies SIA "Suntech.Lv" komandas speciālisti:
-                    Elizabetes iela 3 - Kāpņu montāža un sienu pastiprināšana;
-                    Rīgas Nacionālais zooloģiskais dārzs - Jumtu izbūve un apkope;
-                    Veikals "Prizma" (Saharova iela) - Nesošu metāla konstrukciju izgatavošana un montāža;
-                    Atkritumu šķirošaas stacijas (Madonā un Aizkrauklē) - Nesošu metāla konstrukciju izgatavošana un montāža;
-                    Veikals "Maksima" (Jēkabpils) - Nesošu metāla konstrukciju izgatavošana un montāža
-                    Zirgu sallis (Jelgava) - Jauna jumta izbūve un nesošu metāla konstrukciju izgatavošana un montāža;
-                    Bērnudārzi (Ogre) - Evakuācijas kāpņu izgatavošana un montāža. Margu izgatavošana un uzstādīšana;
-                    Skuju iela 11 - Metāla žoga un metāla stabu montāža</p>
+                <p>
+                    Zemāk uzskaitīti tikai daži no būvniecības objektiem, kuros piedalījušies SIA "Suntech.Lv" komandas speciālisti:
+                </p>
+                <ul>
+                    <li>Elizabetes iela 3 - Kāpņu montāža un sienu pastiprināšana</li>
+                    <li>Rīgas Nacionālais zooloģiskais dārzs - Jumtu izbūve un apkope</li>
+                    <li>Veikals "Prizma" (Saharova iela) - Nesošu metāla konstrukciju izgatavošana un montāža</li>
+                    <li>Atkritumu šķirošaas stacijas (Madonā un Aizkrauklē) - Nesošu metāla konstrukciju izgatavošana un montāža</li>
+                    <li>Veikals "Maksima" (Jēkabpils) - Nesošu metāla konstrukciju izgatavošana un montāža</li>
+                    <li>Zirgu sallis (Jelgava) - Jauna jumta izbūve un nesošu metāla konstrukciju izgatavošana un montāža</li>
+                    <li>Bērnudārzi (Ogre) - Evakuācijas kāpņu izgatavošana un montāža. Margu izgatavošana un uzstādīšana</li>
+                    <li>Skuju iela 11 - Metāla žoga un metāla stabu montāža</li>
+                </ul>
             </div>
         </div>
 
@@ -131,11 +146,10 @@
                     </h2>
                 </div>
 
-                <div class="parner_img opacity_0"><a href="#"><img src="img/partners/logo_isolate_red.svg" alt="1"/></a></div>
-                <div class="parner_img opacity_0"><a href="#"><img src="img/partners/rare.png" alt="1"/></a></div>
-                <div class="parner_img opacity_0"><a href="#"><img src="img/partners/legend.png" alt="1"/></a></div>
-                <div class="parner_img opacity_0"><a href="#"><img src="img/partners/gandrs.png" alt="1"/></a></div>
-                <div class="parner_img opacity_0"><a href="#"><img src="img/partners/home.png" alt="1"/></a></div>
+                <div class="parner_img opacity_0"><a href="http://www.latroof.lv/" target="_blank"><img src="img/partners/latroof.jpg" alt="1"/></a></div>
+                <div class="parner_img opacity_0"><a href="http://www.lebens.lv/" target="_blank"><img src="img/partners/lebens.png" alt="1"/></a></div>
+                <div class="parner_img opacity_0"><a href="#"><img src="img/partners/zj.jpg" alt="1"/></a></div>
+                <div class="parner_img opacity_0"><a href="http://avector.lv/" target="_blank"><img src="img/partners/avector.svg" alt="avector"/></a></div>
             </div>
         </div>
 
@@ -177,7 +191,7 @@
         $(document).ready(function() {
             $('#fullpage').fullpage({
                 sectionsColor: ['#2A67B2', '#f7f7f7', '#2A67B2', '#ffffff', '#ffffff'],
-                anchors: ['firstPage', 'secondPage', '3rdPage', '4thPage', 'lastPage'],
+                anchors: ['Home', 'About', 'Services', 'Partners', 'Contacts'],
                 menu: '#menu',
                 scrollingSpeed: 1000,
                 responsive: 1050,
@@ -188,10 +202,10 @@
                 'onLeave': function (index, nextIndex, direction) {
                     //going from section 1 to 2
                     if (index == 1 && direction == 'down') {
-                        $(".svarigi p").each(function(i){
+                        $(".svarigi p, .svarigi ul").each(function(i){
 
                             setTimeout(function() {
-                                $(".svarigi p").eq(i).addClass("fade_in");
+                                $(".svarigi p, .svarigi ul").eq(i).addClass("fade_in");
                             }, 300 * (i+1));
                         });
                         //going from section 2 to 3

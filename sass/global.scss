@@ -295,6 +295,31 @@ button.hamburger {
     transition: .4s;
   }
 
+  ul {
+    margin: 0;
+    padding: 0 0 0 10px;
+    opacity: 0;
+    transform: translateX(-50px);
+    transition: .4s;
+
+    li {
+      font-size: .9em;
+      margin-bottom: 10px;
+
+      &::before {
+        content: "";
+        display: inline-block;
+        width: 10px;
+        height: 10px;
+        border: 2px solid $color_blue_light;
+        margin-right: 10px;
+        border-top-left-radius: 10px;
+        border-top-right-radius: 10px;
+        border-bottom-left-radius: 10px;
+      }
+    }
+  }
+
   p {
     text-align: justify;
     color: $color_light;
