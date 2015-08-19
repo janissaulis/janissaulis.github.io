@@ -355,6 +355,11 @@ button.hamburger {
     .content_left {
       width: 100%;
       padding: 10% 50px 50px;
+
+      ul, p {
+        transform: translate(0);
+        opacity: 1;
+      }
     }
 
     h1 {
@@ -604,6 +609,8 @@ button.hamburger {
 
 
 .kontakti {
+  overflow: hidden;
+  position: relative;
 
   .footer_overlay {
     background: rgba($color_blue, .9);

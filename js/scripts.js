@@ -46,10 +46,6 @@ $(document).ready(function() {
             for (var i = 0; i < $("video").length; i++) {
                 $("video")[i].play();
             }
-
-            $(".right p").addClass("fade_in");
-
-            $(".cta").removeClass("opacity_0 scale");
         },
 
         'afterLoad': function (anchorLink, index) {
@@ -81,6 +77,6 @@ $(".hamburger").click(function(){
     $(".menu").fadeIn("fast");
 });
 
-$("#close").click(function(){
+$("#close, .menu ul li").click(function(){
     $(".menu").fadeOut("fast");
 });

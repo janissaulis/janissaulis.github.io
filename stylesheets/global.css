@@ -49,26 +49,28 @@ p {
 }
 
 /* line 58, ../sass/_imports.scss */
-.scale {
-  transform: scale(2);
-}
-
-/* line 62, ../sass/_imports.scss */
 .opacity_1 {
   opacity: 1;
   transform: translateY(0);
 }
 
-/* line 67, ../sass/_imports.scss */
+/* line 63, ../sass/_imports.scss */
 .add_bg {
   background: rgba(42, 103, 178, 0.9);
 }
 
-/* line 71, ../sass/_imports.scss */
+/* line 67, ../sass/_imports.scss */
 .add_bg_w {
   background: rgba(255, 255, 255, 0.9);
 }
 
+@media screen and (max-width: 1280px) {
+  /* line 72, ../sass/_imports.scss */
+  .opacity_0 {
+    opacity: 1;
+    transform: translate(0);
+  }
+}
 /* line 8, ../sass/global.scss */
 button.hamburger {
   position: fixed;
@@ -402,42 +404,47 @@ button.hamburger span {
     width: 100%;
     padding: 10% 50px 50px;
   }
-  /* line 360, ../sass/global.scss */
+  /* line 359, ../sass/global.scss */
+  .svarigi .content_left ul, .svarigi .content_left p {
+    transform: translate(0);
+    opacity: 1;
+  }
+  /* line 365, ../sass/global.scss */
   .svarigi h1 {
     color: white;
     margin: 0 0 50px;
   }
 }
 @media screen and (max-width: 500px) {
-  /* line 368, ../sass/global.scss */
+  /* line 373, ../sass/global.scss */
   .svarigi {
     height: auto;
   }
-  /* line 371, ../sass/global.scss */
+  /* line 376, ../sass/global.scss */
   .svarigi .content_left {
     width: 100%;
     height: auto;
     min-height: 100vh;
     padding: 20% 70px 50px 20px;
   }
-  /* line 377, ../sass/global.scss */
+  /* line 382, ../sass/global.scss */
   .svarigi .content_left p {
     font-size: .9em;
   }
-  /* line 382, ../sass/global.scss */
+  /* line 387, ../sass/global.scss */
   .svarigi h1 {
     color: white;
     margin: 0 0 50px;
     font-size: 2em;
   }
 }
-/* line 393, ../sass/global.scss */
+/* line 398, ../sass/global.scss */
 .pakalpojumi {
   padding: 0;
   background: url("../img/sample_pakalpojumi.jpg");
   background-size: cover;
 }
-/* line 398, ../sass/global.scss */
+/* line 403, ../sass/global.scss */
 .pakalpojumi .content_middle {
   width: 100%;
   height: auto;
@@ -451,19 +458,19 @@ button.hamburger span {
   padding: 0 0 20px;
   overflow: hidden;
 }
-/* line 411, ../sass/global.scss */
+/* line 416, ../sass/global.scss */
 .pakalpojumi .content_middle .pakalpojumi_head {
   background: #2A67B2;
   padding: 20px;
   margin-bottom: 20px;
 }
-/* line 417, ../sass/global.scss */
+/* line 422, ../sass/global.scss */
 .pakalpojumi .content_middle h2 {
   width: 60%;
   font-size: 1em;
   margin: 0 auto 20px;
 }
-/* line 423, ../sass/global.scss */
+/* line 428, ../sass/global.scss */
 .pakalpojumi .content_middle .pakalpojumi_cell {
   background: rgba(28, 69, 120, 0.75);
   width: 200px;
@@ -475,7 +482,7 @@ button.hamburger span {
   border: 3px solid #f7f7f7;
   position: relative;
 }
-/* line 435, ../sass/global.scss */
+/* line 440, ../sass/global.scss */
 .pakalpojumi .content_middle .pakalpojumi_cell p {
   width: auto;
   height: 80px;
@@ -492,28 +499,28 @@ button.hamburger span {
 }
 
 @media screen and (max-width: 1050px), screen and (max-height: 790px) {
-  /* line 458, ../sass/global.scss */
+  /* line 463, ../sass/global.scss */
   .pakalpojumi .fp-tableCell {
     vertical-align: top;
   }
-  /* line 462, ../sass/global.scss */
+  /* line 467, ../sass/global.scss */
   .pakalpojumi .content_middle {
     position: static;
     background: none;
   }
-  /* line 466, ../sass/global.scss */
+  /* line 471, ../sass/global.scss */
   .pakalpojumi .content_middle .pakalpojumi_head {
     padding: 20px 70px 20px 20px;
     margin-bottom: 20px;
     text-align: left;
     background: rgba(247, 247, 247, 0.8);
   }
-  /* line 473, ../sass/global.scss */
+  /* line 478, ../sass/global.scss */
   .pakalpojumi .content_middle h1 {
     font-size: 2em;
     color: #16355d;
   }
-  /* line 478, ../sass/global.scss */
+  /* line 483, ../sass/global.scss */
   .pakalpojumi .content_middle h2 {
     width: auto;
     font-size: 1em;
@@ -522,19 +529,19 @@ button.hamburger span {
     line-height: 1.5em;
     color: #1c4578;
   }
-  /* line 487, ../sass/global.scss */
+  /* line 492, ../sass/global.scss */
   .pakalpojumi .content_middle .pakalpojumi_cell {
     margin: 20px;
     background: rgba(28, 69, 120, 0.9);
   }
 }
-/* line 498, ../sass/global.scss */
+/* line 503, ../sass/global.scss */
 .partneri {
   background: url("../img/sample_partners.jpg") no-repeat;
   background-size: cover;
   text-align: center;
 }
-/* line 503, ../sass/global.scss */
+/* line 508, ../sass/global.scss */
 .partneri .partner_block {
   background: white;
   width: 100%;
@@ -549,19 +556,19 @@ button.hamburger span {
   padding-bottom: 20px;
   overflow: hidden;
 }
-/* line 517, ../sass/global.scss */
+/* line 522, ../sass/global.scss */
 .partneri .partner_block .partner_head {
   background: #2A67B2;
   padding: 20px;
   margin-bottom: 20px;
 }
-/* line 523, ../sass/global.scss */
+/* line 528, ../sass/global.scss */
 .partneri .partner_block h2 {
   width: 60%;
   font-size: 1em;
   margin: 0 auto 20px;
 }
-/* line 529, ../sass/global.scss */
+/* line 534, ../sass/global.scss */
 .partneri .partner_block .parner_img {
   width: 180px;
   height: auto;
@@ -569,7 +576,7 @@ button.hamburger span {
   display: inline-block;
   transition: .4s;
 }
-/* line 536, ../sass/global.scss */
+/* line 541, ../sass/global.scss */
 .partneri .partner_block .parner_img img {
   max-width: 100%;
   width: 100%;
@@ -578,18 +585,18 @@ button.hamburger span {
   filter: grayscale(0.5) opacity(0.5);
   transition: .4s;
 }
-/* line 544, ../sass/global.scss */
+/* line 549, ../sass/global.scss */
 .partneri .partner_block .parner_img img:hover {
   -webkit-filter: grayscale(0) opacity(1);
   filter: grayscale(0) opacity(1);
 }
 
 @media screen and (max-width: 1050px), screen and (max-height: 790px) {
-  /* line 556, ../sass/global.scss */
+  /* line 561, ../sass/global.scss */
   .partneri .fp-tableCell {
     vertical-align: top;
   }
-  /* line 560, ../sass/global.scss */
+  /* line 565, ../sass/global.scss */
   .partneri .partner_block {
     position: static;
     text-align: center;
@@ -597,17 +604,17 @@ button.hamburger span {
     overflow: hidden;
     margin-top: 0;
   }
-  /* line 567, ../sass/global.scss */
+  /* line 572, ../sass/global.scss */
   .partneri .partner_block .partner_head {
     padding: 20px 70px 20px 20px;
     margin-bottom: 20px;
   }
-  /* line 572, ../sass/global.scss */
+  /* line 577, ../sass/global.scss */
   .partneri .partner_block h1 {
     font-size: 2em;
     text-align: left;
   }
-  /* line 577, ../sass/global.scss */
+  /* line 582, ../sass/global.scss */
   .partneri .partner_block h2 {
     width: auto;
     font-size: 1em;
@@ -615,7 +622,7 @@ button.hamburger span {
     margin: 0 0 20px;
     text-align: justify;
   }
-  /* line 585, ../sass/global.scss */
+  /* line 590, ../sass/global.scss */
   .partneri .partner_block .parner_img {
     width: 180px;
     height: auto;
@@ -623,14 +630,19 @@ button.hamburger span {
     display: inline-block;
     transition: .4s;
   }
-  /* line 592, ../sass/global.scss */
+  /* line 597, ../sass/global.scss */
   .partneri .partner_block .parner_img img {
     -webkit-filter: grayscale(0) opacity(1);
     filter: grayscale(0) opacity(1);
     transition: .4s;
   }
 }
-/* line 608, ../sass/global.scss */
+/* line 611, ../sass/global.scss */
+.kontakti {
+  overflow: hidden;
+  position: relative;
+}
+/* line 615, ../sass/global.scss */
 .kontakti .footer_overlay {
   background: rgba(42, 103, 178, 0.9);
   position: absolute;
@@ -642,31 +654,31 @@ button.hamburger span {
   z-index: 100;
   padding: 80px 0 0 30px;
 }
-/* line 619, ../sass/global.scss */
+/* line 626, ../sass/global.scss */
 .kontakti .footer_overlay h2 {
   font-size: 1.25em;
   color: #f7f7f7;
   text-align: left;
 }
-/* line 624, ../sass/global.scss */
+/* line 631, ../sass/global.scss */
 .kontakti .footer_overlay h2:first-of-type {
   margin-top: 50px;
 }
-/* line 628, ../sass/global.scss */
+/* line 635, ../sass/global.scss */
 .kontakti .footer_overlay h2 span {
   font-size: .75em;
   color: #aad4ef;
   display: inline-block;
   width: 100px;
 }
-/* line 636, ../sass/global.scss */
+/* line 643, ../sass/global.scss */
 .kontakti .footer_overlay div.fb {
   margin: 150px 0 0;
   background: #f7f7f7;
   width: 350px;
   padding: 5px;
 }
-/* line 643, ../sass/global.scss */
+/* line 650, ../sass/global.scss */
 .kontakti .footer_overlay footer {
   position: absolute;
   width: 100%;
@@ -674,29 +686,29 @@ button.hamburger span {
   left: 0;
   background: #2A67B2;
 }
-/* line 650, ../sass/global.scss */
+/* line 657, ../sass/global.scss */
 .kontakti .footer_overlay footer p {
   text-align: center;
   margin: 5px 0;
 }
-/* line 657, ../sass/global.scss */
+/* line 664, ../sass/global.scss */
 .kontakti .footer_map {
   width: 100%;
 }
-/* line 660, ../sass/global.scss */
+/* line 667, ../sass/global.scss */
 .kontakti .footer_map #google_map {
   width: 100%;
   height: 100vh;
 }
 
 @media screen and (max-width: 1050px), screen and (max-height: 790px) {
-  /* line 668, ../sass/global.scss */
+  /* line 675, ../sass/global.scss */
   .kontakti {
     height: 800px !important;
     width: 100%;
     overflow: hidden;
   }
-  /* line 673, ../sass/global.scss */
+  /* line 680, ../sass/global.scss */
   .kontakti .footer_overlay {
     background: #2a67b2;
     position: absolute;
@@ -707,32 +719,32 @@ button.hamburger span {
     height: 300px;
     padding: 10px 0 0 5%;
   }
-  /* line 683, ../sass/global.scss */
+  /* line 690, ../sass/global.scss */
   .kontakti .footer_overlay h1 {
     font-size: 2em;
   }
-  /* line 687, ../sass/global.scss */
+  /* line 694, ../sass/global.scss */
   .kontakti .footer_overlay h2 {
     font-size: 1em;
     color: #f7f7f7;
     text-align: left;
   }
-  /* line 692, ../sass/global.scss */
+  /* line 699, ../sass/global.scss */
   .kontakti .footer_overlay h2:first-of-type {
     margin-top: 50px;
   }
-  /* line 696, ../sass/global.scss */
+  /* line 703, ../sass/global.scss */
   .kontakti .footer_overlay h2 span {
     font-size: .75em;
     color: #aad4ef;
     display: inline-block;
     width: 100px;
   }
-  /* line 704, ../sass/global.scss */
+  /* line 711, ../sass/global.scss */
   .kontakti .footer_overlay div.fb {
     display: none;
   }
-  /* line 708, ../sass/global.scss */
+  /* line 715, ../sass/global.scss */
   .kontakti .footer_overlay footer {
     position: absolute;
     width: 100%;
@@ -741,19 +753,19 @@ button.hamburger span {
     background: #1c4578;
     margin: 0;
   }
-  /* line 716, ../sass/global.scss */
+  /* line 723, ../sass/global.scss */
   .kontakti .footer_overlay footer p {
     text-align: center;
     margin: 5px 0;
   }
-  /* line 723, ../sass/global.scss */
+  /* line 730, ../sass/global.scss */
   .kontakti .footer_map {
     width: 100%;
     margin: 0;
     position: absolute;
     top: 0;
   }
-  /* line 729, ../sass/global.scss */
+  /* line 736, ../sass/global.scss */
   .kontakti .footer_map #google_map {
     width: 100%;
     height: 500px;

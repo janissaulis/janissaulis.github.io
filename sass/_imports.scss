@@ -55,10 +55,6 @@ p {
   transform: translateY(100px);
 }
 
-.scale {
-  transform: scale(2);
-}
-
 .opacity_1 {
   opacity: 1;
   transform: translateY(0);
@@ -70,4 +66,11 @@ p {
 
 .add_bg_w {
   background: rgba(white, .9);
+}
+
+@media screen and (max-width: 1280px){
+  .opacity_0 {
+    opacity: 1;
+    transform: translate(0);
+  }
 }
